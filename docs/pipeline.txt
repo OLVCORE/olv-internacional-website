@@ -1,0 +1,36 @@
+🛠️ PIPELINE DE DEPLOY – OLV INTERNACIONAL WEBSITE PREMIUM
+
+1️⃣ ✔️ Checar estrutura de pastas:
+/css, /js, /images, /docs, index.html
+
+2️⃣ ✔️ Validar funcionamento local:
+- Abrir index.html no VS Code usando Live Server.
+
+3️⃣ ✔️ Testar ticker, menu fixo, cards, footer inteligente.
+
+4️⃣ ✔️ Subir para GitHub (recomendado):
+- Criar repositório 'olv-internacional-website'
+- git init
+- git add .
+- git commit -m "Deploy inicial"
+- git remote add origin (URL GitHub)
+- git push -u origin main
+
+5️⃣ ✔️ Deploy:
+- Netlify (drop folder ou conectar Git)
+- Vercel (importar Git)
+- HostGator (via FTP ou painel)
+
+6️⃣ ✔️ Configurar DNS personalizado:
+- www.olvinternacional.com.br → apontar para Netlify, Vercel ou HostGator.
+
+7️⃣ ✔️ Teste Final:
+- Verificar responsividade, ticker, navegação e footer.
+
+8️⃣ ✔️ Checklist de Integrações Futuras:
+- 🔗 Integração com MailerLite (Newsletter)
+- 🔗 Integração com Apollo.io (CRM Leads)
+- 🔗 Conexão ao CRM do OLV CORE
+- 🔗 Conexão API OpenAI (Consultas Inteligentes)
+
+9️⃣ 🚀 Go Live! 🚀
