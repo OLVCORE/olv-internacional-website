@@ -3,130 +3,31 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>OLV INTERNACIONAL – Website Premium</title>
+
+<title>OLV Internacional | Integramos Estratégia, Operação e Resultado</title>
+<meta name="description" content="A OLV Internacional oferece consultoria premium em Supply Chain, Comércio Exterior e Inteligência Empresarial. Estratégia, operação e resultados para empresas que querem crescer.">
+<meta name="keywords" content="OLV Internacional, Supply Chain, Consultoria, Comércio Exterior, Logística Internacional, Gestão Empresarial, Inteligência de Mercado, Análise de Empresas, Due Diligence, Compliance Empresarial, Planejamento Logístico, Internacionalização, Estratégia Empresarial">
+<meta name="author" content="OLV Internacional">
+
+<!-- 🔥 Open Graph -->
+<meta property="og:title" content="OLV Internacional | Integramos Estratégia, Operação e Resultado">
+<meta property="og:description" content="Consultoria premium em Supply Chain, Comércio Exterior e Inteligência Empresarial. Cresça com controle, gestão e resultados.">
+<meta property="og:image" content="https://www.olvinternacional.com.br/images/preview.png">
+<meta property="og:url" content="https://www.olvinternacional.com.br/">
+<meta property="og:type" content="website">
+
+<!-- 🔥 Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="OLV Internacional | Integramos Estratégia, Operação e Resultado">
+<meta name="twitter:description" content="Consultoria premium em Supply Chain, Comércio Exterior e Inteligência Empresarial. Cresça com controle, gestão e resultados.">
+<meta name="twitter:image" content="https://www.olvinternacional.com.br/images/preview.png">
+
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-<style>
-  :root {
-    --primary-color: #d4af37;
-    --secondary-color: #0a0f1a;
-    --background-color: #121a2f;
-    --card-color: #1b253a;
-    --text-color: #ffffff;
-    --subtext-color: #b0bec5;
-  }
-  body {
-    margin: 0;
-    background-color: var(--secondary-color);
-    font-family: 'Inter', sans-serif;
-    color: var(--text-color);
-  }
-  header {
-    background-color: rgba(10, 15, 26, 0.9);
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 40px;
-    z-index: 1000;
-    border-bottom: 2px solid var(--primary-color);
-  }
-  header h1 {
-    color: var(--primary-color);
-    font-size: 20px;
-    margin: 0;
-  }
-  nav a {
-    margin: 0 15px;
-    color: var(--text-color);
-    text-decoration: none;
-    font-weight: 600;
-    transition: color 0.3s;
-  }
-  nav a:hover {
-    color: var(--primary-color);
-  }
-  .ticker {
-    width: 100%;
-    background: #0C1C2C;
-    color: var(--primary-color);
-    white-space: nowrap;
-    overflow: hidden;
-    box-sizing: border-box;
-    padding: 8px 0;
-    position: fixed;
-    top: 50px;
-    z-index: 999;
-  }
-  .ticker p {
-    display: inline-block;
-    padding-left: 100%;
-    animation: ticker 20s linear infinite;
-    font-size: 14px;
-  }
-  @keyframes ticker {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-100%); }
-  }
-  .section {
-    padding: 120px 40px 80px;
-  }
-  .section h2 {
-    color: var(--primary-color);
-    margin-bottom: 20px;
-  }
-  .cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 20px;
-  }
-  .card {
-    background-color: rgba(27, 37, 58, 0.85);
-    border: 2px solid var(--primary-color);
-    border-radius: 24px;
-    padding: 20px;
-    box-shadow: 0 8px 20px rgba(212, 175, 55, 0.3);
-    transition: transform 0.3s, box-shadow 0.3s;
-  }
-  .card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 12px 24px rgba(212, 175, 55, 0.5);
-  }
-  .card h3 {
-    margin-top: 0;
-    color: var(--primary-color);
-  }
-  .card p {
-    color: var(--subtext-color);
-    font-size: 14px;
-  }
-  footer {
-    background-color: var(--background-color);
-    padding: 20px;
-    text-align: center;
-    color: var(--subtext-color);
-    position: fixed;
-    bottom: -100px;
-    width: 100%;
-    transition: bottom 0.5s ease;
-    font-size: 13px;
-  }
-  footer.visible {
-    bottom: 0;
-  }
-</style>
-<script>
-  window.onscroll = function() {
-    const footer = document.querySelector('footer');
-    if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
-      footer.classList.add('visible');
-    } else {
-      footer.classList.remove('visible');
-    }
-  };
-</script>
+<link rel="icon" href="images/favicon.png">
+
+<link rel="stylesheet" href="css/style.min.css">
+
+<script defer src="js/script.min.js"></script>
 </head>
 
 <body>
@@ -134,12 +35,12 @@
 <header>
   <h1>OLV INTERNACIONAL</h1>
   <nav>
-    <a href="#home">Home</a>
-    <a href="#sobre">Sobre</a>
-    <a href="#solucoes">Soluções</a>
-    <a href="#ecossistema">Ecossistema</a>
+    <a href="index.html">Home</a>
+    <a href="sobre.html">Sobre</a>
+    <a href="solucoes.html">Soluções</a>
+    <a href="hub.html">Ecossistema</a>
     <a href="#blog">Blog</a>
-    <a href="#contato">Contato</a>
+    <a href="contato.html">Contato</a>
   </nav>
 </header>
 
@@ -155,41 +56,51 @@
 <section class="section" id="ecossistema">
   <h2>Nosso Ecossistema</h2>
   <div class="cards">
-    <div class="card"><h3>STRATEVO</h3><p>Plataforma de inteligência de mercado, análise de empresas, benchmarking competitivo e geração de insights estratégicos. Validação de CNPJs, matriz SWOT e análise de riscos.</p></div>
-    <div class="card"><h3>EXCELTTA</h3><p>Gestão empresarial inteligente, precificação, análise tributária, simulações de custos, margens, rentabilidade e viabilidade para negócios privados e licitações públicas.</p></div>
-    <div class="card"><h3>OLV CONNECTA</h3><p>Hub de fornecedores homologados nacionais e internacionais. Conecta empresas a fabricantes e distribuidores, com compliance, rastreabilidade e segurança.</p></div>
-    <div class="card"><h3>OLV VERITUS</h3><p>Compliance, due diligence e blindagem empresarial. Análise de riscos jurídicos, comerciais e reputacionais, protegendo negócios em qualquer mercado.</p></div>
-    <div class="card"><h3>OLV FINX</h3><p>Inteligência financeira, gestão de fluxo de caixa, planejamento tributário e simulações. Conecta empresas a crédito, bancos, fintechs e investidores.</p></div>
-    <div class="card"><h3>OLV CORE</h3><p>Cockpit inteligente que integra todas as soluções. Visão 360º, KPIs, indicadores financeiros, operacionais, pipeline de negócios e monitoramento em tempo real.</p></div>
-    <div class="card"><h3>OLV ACADEMY</h3><p>Capacitação executiva, onboarding estratégico, treinamentos, workshops e desenvolvimento de competências em supply chain, finanças, inteligência e inovação.</p></div>
-    <div class="card"><h3>OLV LABS</h3><p>Laboratório de inovação, IA, automação e desenvolvimento de APIs, bots e soluções digitais. Base tecnológica de todo o Ecossistema OLV CORE.</p></div>
-    <div class="card"><h3>OLV VENTURES</h3><p>Incubadora de startups e projetos inovadores. Promove desenvolvimento de negócios, acesso a investidores, internacionalização e venture building.</p></div>
+    <div class="card"><h3>STRATEVO</h3><p>Inteligência de mercado, análise de empresas, benchmarking competitivo e insights estratégicos. Validação de CNPJs, matriz SWOT e análise de riscos.</p></div>
+    <div class="card"><h3>EXCELTTA</h3><p>Gestão empresarial inteligente, precificação, análise tributária, simulações de custos, margens e viabilidade para negócios e licitações.</p></div>
+    <div class="card"><h3>OLV CONNECTA</h3><p>Hub de fornecedores homologados nacionais e internacionais. Conecta empresas a fabricantes e distribuidores com segurança e rastreabilidade.</p></div>
+    <div class="card"><h3>OLV VERITUS</h3><p>Compliance, due diligence e blindagem empresarial. Análise de riscos jurídicos, comerciais e reputacionais para proteger negócios.</p></div>
+    <div class="card"><h3>OLV FINX</h3><p>Gestão financeira inteligente, fluxo de caixa, planejamento tributário e acesso a crédito. Conecta empresas a bancos, fintechs e investidores.</p></div>
+    <div class="card"><h3>OLV CORE</h3><p>Cockpit inteligente que integra todas as soluções. Visão 360º, KPIs, indicadores financeiros, pipeline de negócios e operações em tempo real.</p></div>
+    <div class="card"><h3>OLV ACADEMY</h3><p>Capacitação executiva, treinamentos, workshops e desenvolvimento de competências em supply chain, finanças, inteligência e inovação.</p></div>
+    <div class="card"><h3>OLV LABS</h3><p>Laboratório de inovação, IA, automação e desenvolvimento de APIs, bots e soluções digitais. Tecnologia aplicada ao ecossistema.</p></div>
+    <div class="card"><h3>OLV VENTURES</h3><p>Incubadora de startups e projetos inovadores. Fomenta negócios, acesso a investidores, internacionalização e venture building.</p></div>
   </div>
 </section>
 
 <section class="section" id="sobre">
   <h2>Sobre a OLV Internacional</h2>
   <p><strong>OLV INTERNACIONAL – O Braço Consultivo do Ecossistema OLV CORE</strong><br><br>
-  A OLV Internacional é a gênese, a pioneira e o pilar do Ecossistema OLV CORE. Com mais de 35 anos de trajetória, transforma experiência global em tecnologia e inteligência aplicada. Atua como braço consultivo, conectando negócios, gerando valor e implementando operações inteligentes para PMEs no Brasil e no mundo.</p>
+  Com mais de 35 anos de trajetória, transformamos experiência global em inteligência aplicada. Somos especialistas em Supply Chain, Comércio Exterior e Inteligência Empresarial, apoiando PMEs na expansão de negócios com segurança e rentabilidade.</p>
 </section>
 
 <section class="section" id="solucoes">
   <h2>Nossas Soluções</h2>
-  <p>Consultoria estratégica em supply chain, expansão internacional, gestão de risco, due diligence, planejamento logístico, importação, exportação e transformação digital para PMEs.</p>
+  <p>Consultoria estratégica em supply chain, comércio exterior, gestão de riscos, planejamento logístico, compliance, due diligence, inteligência financeira, internacionalização e transformação digital.</p>
 </section>
 
 <section class="section" id="blog">
   <h2>Blog e Insights</h2>
-  <p>Fique por dentro das tendências, mercado, inovação, supply chain, comércio exterior, finanças e tecnologia.</p>
+  <p>Fique por dentro de tendências, mercado, inovação, supply chain, comércio exterior, finanças e tecnologia.</p>
 </section>
 
 <section class="section" id="contato">
   <h2>Contato</h2>
-  <p>Fale conosco. WhatsApp, E-mail, Formulário e redes sociais.</p>
+  <p>Fale conosco. WhatsApp, E-mail, Formulário e Redes Sociais.</p>
 </section>
 
 <footer>
-  <p>© Copyright - | OLV INTERNACIONAL COMÉRCIO, IMPORTAÇÃO E EXPORTAÇÃO LTDA - CNPJ 67.867.580/0001-90 | Desenvolvido por OLV CORE | Powered by OLV Internacional | Todos os direitos reservados.</p>
+  <p>
+    © Copyright - OLV INTERNACIONAL COMÉRCIO, IMPORTAÇÃO E EXPORTAÇÃO LTDA - CNPJ 67.867.580/0001-90 |
+    Desenvolvido por <a href="https://www.i9certonegocios.com.br" target="_blank">I9Certo Negócios Digitais</a> |
+    All Rights Reserved | Powered by OLV Internacional
+  </p>
+  <div class="social-icons">
+    <a href="https://www.facebook.com/olvinternacional/" target="_blank">🔗</a>
+    <a href="https://www.linkedin.com/in/olv-internacional-b1734a193/" target="_blank">🔗</a>
+    <a href="https://www.instagram.com/olvinternacional/" target="_blank">🔗</a>
+    <a href="mailto:atendimento@olvinternacional.com.br">📧</a>
+  </div>
 </footer>
 
 </body>
