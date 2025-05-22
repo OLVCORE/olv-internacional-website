@@ -1,1 +1,42 @@
-Conteúdo simulado de sitemap.xml
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://olv-internacional-website.netlify.app/</loc>
+  </url>
+  <url>
+    <loc>https://olv-internacional-website.netlify.app/sobre.html</loc>
+  </url>
+  <url>
+    <loc>https://olv-internacional-website.netlify.app/solucoes.html</loc>
+  </url>
+  <url>
+    <loc>https://olv-internacional-website.netlify.app/hub.html</loc>
+  </url>
+  <url>
+    <loc>https://olv-internacional-website.netlify.app/contato.html</loc>
+  </url>
+  <url>
+    <loc>https://olv-internacional-website.netlify.app/stratevo.html</loc>
+  </url>
+  <url>
+    <loc>https://olv-internacional-website.netlify.app/exceltta.html</loc>
+  </url>
+  <url>
+    <loc>https://olv-internacional-website.netlify.app/connecta.html</loc>
+  </url>
+  <url>
+    <loc>https://olv-internacional-website.netlify.app/veritus.html</loc>
+  </url>
+  <url>
+    <loc>https://olv-internacional-website.netlify.app/finx.html</loc>
+  </url>
+  <url>
+    <loc>https://olv-internacional-website.netlify.app/labs.html</loc>
+  </url>
+  <url>
+    <loc>https://olv-internacional-website.netlify.app/ventures.html</loc>
+  </url>
+  <url>
+    <loc>https://olv-internacional-website.netlify.app/academy.html</loc>
+  </url>
+</urlset>

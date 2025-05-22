@@ -1,0 +1,10 @@
+🔗 Pipeline OLV Internacional Website
+
+1. ✅ Estruturação de pastas e arquivos
+2. ✅ Desenvolvimento de HTML, CSS e JS
+3. ✅ Implementação de SEO (title, meta, sitemap, robots)
+4. ✅ Testes locais com Live Server
+5. ✅ Commit e Push no GitHub
+6. ✅ Deploy no Netlify
+7. 🔜 DNS apontamento para domínio oficial
+8. 🔜 Setup no Google Search Console e Analytics
