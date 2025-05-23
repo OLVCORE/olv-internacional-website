@@ -28,427 +28,58 @@
 
   <!-- Script JS -->
   <script defer src="js/script.js"></script>
-
-  <!-- Estilos Básicos -->
-  <style>
-    :root {
-      --primary-color: #d4af37;
-      --background-color: #0a0f1a;
-      --highlight-color: #1E90FF;
-      --card-border: #d4af37;
-      --font-color: white;
-      --secondary-background: #12161f;
-    }
-
-    body {
-      background-color: var(--background-color);
-      color: var(--font-color);
-      font-family: 'Inter', sans-serif;
-      margin: 0;
-      padding-left: 60px;
-      overflow-x: hidden;
-    }
-
-    .container {
-      max-width: 1400px;
-      margin: 0 auto;
-      padding: 0 2cm;
-      box-sizing: border-box;
-    }
-
-    header {
-      background-color: var(--background-color);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 15px 2cm;
-      border-bottom: 1px solid var(--card-border);
-      position: relative;
-      z-index: 100;
-    }
-
-    header h1 {
-      color: var(--primary-color);
-      margin: 0;
-      font-size: 1.8rem;
-    }
-
-    nav a {
-      color: var(--font-color);
-      margin: 0 10px;
-      text-decoration: none;
-      font-weight: 600;
-      transition: color 0.3s ease;
-    }
-
-    nav a:hover {
-      color: var(--highlight-color);
-    }
-
-    .section {
-      padding: 60px 0;
-      position: relative;
-      z-index: 10;
-    }
-
-    .section h2 {
-      color: var(--primary-color);
-      margin-bottom: 40px;
-      text-align: center;
-      font-size: 2rem;
-    }
-
-    .hero {
-      text-align: center;
-      padding: 80px 0;
-    }
-
-    .hero h2 {
-      font-size: 3rem;
-      margin-bottom: 20px;
-    }
-
-    .hero p {
-      max-width: 800px;
-      margin: 20px auto 40px;
-      font-size: 1.1rem;
-      line-height: 1.6;
-    }
-
-    .cta-button {
-      display: inline-block;
-      background-color: var(--primary-color);
-      color: black;
-      padding: 12px 25px;
-      border: none;
-      border-radius: 30px;
-      cursor: pointer;
-      font-weight: bold;
-      text-decoration: none;
-      text-align: center;
-      transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
-    }
-
-    .cta-button:hover {
-      background-color: var(--highlight-color);
-      color: white;
-      transform: translateY(-3px);
-    }
-
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 30px;
-      margin-top: 30px;
-    }
-
-    .card {
-      border: 1px solid var(--card-border);
-      padding: 30px;
-      border-radius: 15px;
-      background-color: rgba(255, 255, 255, 0.03);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-
-    .card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-    }
-
-    .card h3 {
-      color: var(--primary-color);
-      margin-top: 0;
-      margin-bottom: 15px;
-      font-size: 1.4rem;
-    }
-
-    .card ul {
-      padding-left: 25px;
-      margin-bottom: 15px;
-      list-style: none;
-    }
-
-    .card ul li {
-      margin-bottom: 10px;
-      position: relative;
-      padding-left: 20px;
-      font-size: 0.95rem;
-    }
-
-    .card ul li:before {
-      content: '✔️';
-      color: var(--highlight-color);
-      position: absolute;
-      left: 0;
-      top: 0;
-    }
-
-    .sidebar {
-      position: fixed;
-      left: 0;
-      top: 0;
-      width: 60px;
-      height: 100%;
-      background-color: var(--secondary-background);
-      border-right: 1px solid var(--card-border);
-      transition: width 0.3s ease;
-      overflow-x: hidden;
-      z-index: 1000;
-      display: flex;
-      flex-direction: column;
-      padding-top: 20px;
-    }
-
-    .sidebar:hover {
-      width: 240px;
-    }
-
-    .sidebar a {
-      display: flex;
-      align-items: center;
-      padding: 15px;
-      color: var(--font-color);
-      text-decoration: none;
-      transition: background-color 0.3s ease, color 0.3s ease;
-      white-space: nowrap;
-    }
-
-    .sidebar a img {
-      width: 24px;
-      margin-right: 15px;
-      flex-shrink: 0;
-    }
-
-    .sidebar a span {
-      opacity: 0;
-      transition: opacity 0.3s ease;
-      overflow: hidden;
-    }
-
-    .sidebar:hover a span {
-      opacity: 1;
-    }
-
-    .sidebar a:hover {
-      background-color: rgba(255, 255, 255, 0.08);
-      color: var(--highlight-color);
-    }
-
-    .sidebar a:hover img {
-      filter: brightness(1.5);
-    }
-
-    .whatsapp-button, .specialist-button {
-      position: fixed;
-      z-index: 999;
-      border-radius: 50px;
-      text-decoration: none;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 10px;
-    }
-
-    .whatsapp-button {
-      bottom: 20px;
-      right: 20px;
-      background-color: #25D366;
-      color: white;
-      font-size: 24px;
-      width: 50px;
-      height: 50px;
-    }
-
-    .whatsapp-button img {
-      width: 30px;
-      height: 30px;
-    }
-
-    .specialist-button {
-      top: 50%;
-      left: 20px;
-      transform: translateY(-50%);
-      background-color: var(--primary-color);
-      color: black;
-      padding: 12px 20px;
-      font-weight: bold;
-      border-radius: 30px;
-    }
-
-    .whatsapp-button:hover, .specialist-button:hover {
-      transform: scale(1.1);
-      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-    }
-
-    footer {
-      background-color: var(--secondary-background);
-      padding: 40px 2cm;
-      text-align: center;
-      border-top: 1px solid var(--card-border);
-      position: relative;
-      z-index: 10;
-    }
-
-    footer p {
-      color: #ccc;
-      margin-bottom: 20px;
-      font-size: 0.9rem;
-    }
-
-    .social-icons a {
-      margin: 0 15px;
-      color: var(--font-color);
-      text-decoration: none;
-      display: inline-block;
-      transition: transform 0.3s ease, color 0.3s ease;
-    }
-
-    .social-icons a img {
-      width: 24px;
-      height: 24px;
-      vertical-align: middle;
-    }
-
-    .social-icons a:hover {
-      color: var(--highlight-color);
-      transform: translateY(-5px);
-    }
-
-    a {
-      color: var(--highlight-color);
-      text-decoration: none;
-      transition: color 0.3s ease, text-decoration 0.3s ease;
-    }
-
-    a:hover {
-      color: white;
-      text-decoration: underline;
-    }
-
-    /* Ajuste específico para o texto de contato */
-    .contact-paragraph {
-      padding-left: 1.5cm;
-      font-size: 1rem;
-      margin-top: 20px;
-    }
-
-    /* Media Queries para Responsividade */
-    @media (max-width: 768px) {
-      body {
-        padding-left: 0;
-      }
-
-      .sidebar {
-        width: 100%;
-        height: auto;
-        position: relative;
-        flex-direction: row;
-        justify-content: center;
-        border-right: none;
-        border-bottom: 1px solid var(--card-border);
-        padding: 10px 0;
-      }
-
-      .sidebar:hover {
-        width: 100%;
-      }
-
-      .sidebar a {
-        padding: 10px;
-        flex-direction: column;
-        align-items: center;
-      }
-
-      .sidebar a img {
-        margin-right: 0;
-        margin-bottom: 5px;
-      }
-
-      .sidebar a span {
-        opacity: 1;
-        font-size: 0.8rem;
-      }
-
-      .sidebar:hover a span {
-        opacity: 1;
-      }
-
-      .section, header, footer {
-        padding-left: 20px;
-        padding-right: 20px;
-      }
-
-      .hero h2 {
-        font-size: 2rem;
-      }
-
-      .hero p {
-        font-size: 1rem;
-      }
-
-      .whatsapp-button, .specialist-button {
-        bottom: 10px;
-        right: 10px;
-        width: 45px;
-        height: 45px;
-        font-size: 20px;
-      }
-
-      .whatsapp-button img {
-        width: 25px;
-        height: 25px;
-      }
-    }
-  </style>
 </head>
 <body>
 
+<!-- ✅ Sidebar Premium com Ícones SVG e Hover Inteligente -->
 <div class="sidebar">
-  <a href="stratevo.html">
-    <img src="icons/stratevo.svg" alt="STRATEVO - Inteligência Empresarial">
+  <a href="stratevo.html" title="STRATEVO - Inteligência Empresarial">
+    <img src="icons/stratevo.svg" alt="STRATEVO">
     <span>STRATEVO</span>
   </a>
-  <a href="exceltta.html">
-    <img src="icons/exceltta.svg" alt="EXCELTTA - Inteligência em Licitações">
+  <a href="exceltta.html" title="EXCELTTA - Inteligência em Licitações">
+    <img src="icons/exceltta.svg" alt="EXCELTTA">
     <span>EXCELTTA</span>
   </a>
-  <a href="connecta.html">
-    <img src="icons/connecta.svg" alt="OLV CONNECTA - Hub de Fornecedores">
+  <a href="connecta.html" title="OLV CONNECTA - Hub de Fornecedores">
+    <img src="icons/connecta.svg" alt="OLV CONNECTA">
     <span>OLV CONNECTA</span>
   </a>
-  <a href="veritus.html">
-    <img src="icons/veritus.svg" alt="OLV VERITUS - Compliance e Due Diligence">
+  <a href="veritus.html" title="OLV VERITUS - Compliance e Due Diligence">
+    <img src="icons/veritus.svg" alt="OLV VERITUS">
     <span>OLV VERITUS</span>
   </a>
-  <a href="finx.html">
-    <img src="icons/finx.svg" alt="OLV FINX - Gestão Financeira">
+  <a href="finx.html" title="OLV FINX - Gestão Financeira">
+    <img src="icons/finx.svg" alt="OLV FINX">
     <span>OLV FINX</span>
   </a>
-  <a href="academy.html">
-    <img src="icons/academy.svg" alt="OLV ACADEMY - Educação Corporativa">
+  <a href="academy.html" title="OLV ACADEMY - Educação Corporativa">
+    <img src="icons/academy.svg" alt="OLV ACADEMY">
     <span>OLV ACADEMY</span>
   </a>
-  <a href="labs.html">
-    <img src="icons/labs.svg" alt="OLV LABS - Inovação e IA">
+  <a href="labs.html" title="OLV LABS - Inovação e IA">
+    <img src="icons/labs.svg" alt="OLV LABS">
     <span>OLV LABS</span>
   </a>
-  <a href="ventures.html">
-    <img src="icons/ventures.svg" alt="OLV VENTURES - Venture Builder">
+  <a href="ventures.html" title="OLV VENTURES - Venture Builder">
+    <img src="icons/ventures.svg" alt="OLV VENTURES">
     <span>OLV VENTURES</span>
   </a>
-  <a href="core.html">
-    <img src="icons/core.svg" alt="OLV CORE - Cockpit de Gestão 360°">
+  <a href="core.html" title="OLV CORE - Cockpit de Gestão 360°">
+    <img src="icons/core.svg" alt="OLV CORE">
     <span>OLV CORE</span>
   </a>
 </div>
 
 <header>
   <div class="container">
-    <h1>OLV INTERNACIONAL</h1>
+    <!-- ✅ Logo e Slogan Integrados -->
+    <div class="logo-slogan">
+      <a href="index.html" class="logo-link">
+        <img src="images/olv-logo.svg" alt="OLV Internacional Logo" class="olv-logo">
+        <span class="olv-slogan">Integramos Estratégia, Operação e Resultado</span>
+      </a>
+    </div>
     <nav>
       <a href="index.html">Home</a>
       <a href="sobre.html">Sobre</a>
@@ -461,12 +92,23 @@
   </div>
 </header>
 
+<!-- ✅ Ticker Dinâmico e Clicável -->
+<div class="ticker">
+  <p>
+    <a href="radar360.html" >🚀 Radar 360 Ativo</a> |
+    <a href="https://www.bcb.gov.br/estatisticas/mercadoabertodiario" >�� Câmbio em Tempo Real</a> |
+    <a href="solucoes.html">💼 Consultoria Premium</a> |
+    <a href="https://comexstat.mdic.gov.br/" >📊 Dados do Comércio Exterior</a> |
+    <a href="contato.html">�� Fale com um Especialista</a>
+  </p>
+</div>
+
 <!-- Hero Banner -->
 <section class="section hero">
   <div class="container">
     <h2>Integramos Estratégia, Operação e Resultado</h2>
     <p>
-      35 anos integrando estratégia, operação e resultado.
+      �� **OLV INTERNACIONAL** — 35 anos integrando estratégia, operação e resultado.
       Somos especialistas em Supply Chain, Comércio Exterior e Logística Internacional.
       Atuamos como o braço consultivo do Ecossistema OLV, oferecendo suporte completo para empresas que querem importar, exportar, expandir seus negócios,
       operar com segurança e alta performance no mercado global.
@@ -549,7 +191,7 @@
         <ul>
           <li>✔️ Planejamento Tributário Nacional e Internacional</li>
           <li>✔️ Compliance Aduaneiro, Fiscal e Tributário</li>
-          <li>✔️ Gestão de Regimes Especiais (Drawback, RECOF, Linha Azul)</li>
+          <li>✔️ Gestão de Regimes Especiais (Drawback, RECOF, Repetro, Adm. Temporária, Linha Azul)</li>
           <li>✔️ Regularização Societária e Operacional para Comércio Exterior</li>
           <li>✔️ Auditorias Fiscais, Operacionais e Aduaneiras</li>
           <li>✔️ Gestão de Riscos Jurídicos e Operacionais na Cadeia Global</li>
@@ -583,6 +225,7 @@
 <!-- Bloco Contato -->
 <section class="section contato">
   <div class="container">
+    <h2>Fale com um Especialista</h2>
     <p class="contact-paragraph">Entre em contato agora via WhatsApp, e-mail ou formulário. Nossa equipe está pronta para transformar sua operação.</p>
     <a href="contato.html" class="cta-button">Fale Agora</a>
     <!-- Aqui entraria o formulário de contato -->
@@ -594,13 +237,13 @@
   <div class="container">
     <p>&copy; 2025 OLV INTERNACIONAL | CNPJ 67.867.580/0001-90 | Desenvolvido com excelência pelo Ecossistema OLV CORE</p>
     <div class="social-icons">
-      <a href="https://instagram.com/olvinternacional" title="Instagram OLV Internacional">
+      <a href="https://instagram.com/olvinternacional"  title="Instagram OLV Internacional">
         <img src="icons/instagram.svg" alt="Instagram">
       </a>
-      <a href="https://linkedin.com/in/olvinternacional" title="LinkedIn OLV Internacional">
+      <a href="https://linkedin.com/in/olvinternacional"  title="LinkedIn OLV Internacional">
         <img src="icons/linkedin.svg" alt="LinkedIn">
       </a>
-      <a href="https://facebook.com/olvinternacional" title="Facebook OLV Internacional">
+      <a href="https://facebook.com/olvinternacional"  title="Facebook OLV Internacional">
         <img src="icons/facebook.svg" alt="Facebook">
       </a>
       <a href="mailto:atendimento@olvinternacional.com.br" title="Enviar E-mail para OLV Internacional">
@@ -610,12 +253,11 @@
   </div>
 </footer>
 
-<!-- Botões Flutuantes -->
+<!-- ✅ Botões Flutuantes (WhatsApp e Fale com um Especialista) -->
 <div class="floating-buttons">
-  <a href="https://wa.me/5511267514469" class="whatsapp-button" title="Fale conosco pelo WhatsApp">
+  <a href="https://wa.me/5511267514469" class="whatsapp-button"  title="Fale conosco pelo WhatsApp">
     <img src="icons/whatsapp.svg" alt="WhatsApp">
   </a>
-
   <a href="contato.html" class="specialist-button" title="Fale com um Especialista OLV">
     Fale com um Especialista
   </a>

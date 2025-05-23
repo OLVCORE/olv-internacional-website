@@ -1,12 +1,12 @@
 /* Variáveis de Cores e Fontes */
 :root {
-  --primary-color: #d4af37;
-  --background-color: #0a0f1a;
-  --highlight-color: #1E90FF;
+  --primary-color: #d4af37; /* Dourado OLV */
+  --background-color: #0a0f1a; /* Azul Escuro OLV */
+  --highlight-color: #1E90FF; /* Azul Vibrante para Links */
   --card-border: #d4af37;
   --font-color: white;
-  --secondary-background: #12161f;
-  --text-color-light: #ccc;
+  --secondary-background: #12161f; /* Tom mais escuro para sidebar/footer */
+  --text-color-light: #ccc; /* Cor para textos secundários */
 }
 
 /* Reset Básico e Estilos Gerais */
@@ -21,22 +21,23 @@ body {
   color: var(--font-color);
   font-family: 'Inter', sans-serif;
   margin: 0;
-  padding-left: 60px;
-  overflow-x: hidden;
-  line-height: 1.6;
+  padding-left: 60px; /* Espaço para o sidebar */
+  overflow-x: hidden; /* Evita scroll horizontal indesejado */
+  line-height: 1.6; /* Espaçamento padrão entre linhas */
+  word-wrap: break-word; /* Quebra palavras longas */
 }
 
 /* Container Centralizado */
 .container {
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 0 2cm;
-  box-sizing: border-box;
+  max-width: 1400px; /* Largura máxima do conteúdo */
+  margin: 0 auto; /* Centraliza o container */
+  padding: 0 2cm; /* Margem lateral de 2cm */
+  box-sizing: border-box; /* Inclui padding na largura total */
 }
 
 /* Estilos de Links Gerais */
 a {
-  color: var(--highlight-color);
+  color: var(--highlight-color); /* Cor azul vibrante para todos os links */
   text-decoration: none;
   transition: color 0.3s ease, text-decoration 0.3s ease;
 }
@@ -52,7 +53,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 0;
+  padding: 15px 0; /* Padding vertical, horizontal handled by container */
   border-bottom: 1px solid var(--card-border);
   position: relative;
   z-index: 100;
@@ -62,13 +63,38 @@ header .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
+  width: 100%; /* Ocupa a largura total do container */
 }
 
-header h1 {
-  color: var(--primary-color);
-  margin: 0;
-  font-size: 1.8rem;
+/* ✅ Estilos para Logo e Slogan no Header */
+.logo-slogan {
+  display: flex;
+  align-items: center;
+}
+
+.logo-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none; /* Remove sublinhado do link do logo */
+  color: inherit; /* Herda a cor do texto */
+}
+
+.olv-logo {
+  height: 40px; /* Tamanho do logo */
+  width: auto;
+  margin-right: 10px;
+  /* ✅ Efeito Circular para o Logo (opcional) */
+  /* border-radius: 50%; */
+  /* overflow: hidden; */
+  /* border: 2px solid var(--primary-color); */
+  /* box-shadow: 0 0 10px rgba(212, 175, 55, 0.5); */
+}
+
+.olv-slogan {
+  color: var(--primary-color); /* Cor do slogan */
+  font-size: 1.2rem; /* Tamanho do slogan */
+  font-weight: 600;
+  white-space: nowrap; /* Evita quebra de linha */
 }
 
 nav a {
@@ -83,9 +109,17 @@ nav a:hover {
   color: var(--highlight-color);
 }
 
+nav a.active { /* ✅ Estilo para link ativo na navegação */
+  color: white;
+  font-weight: 700;
+  border-bottom: 2px solid var(--primary-color);
+  padding-bottom: 3px; /* Pequeno padding para não colar na borda */
+}
+
+
 /* Ticker News */
 .ticker {
-  background-color: var(--secondary-background);
+  background-color: var(--secondary-background); /* ✅ Cor de fundo do ticker */
   color: var(--highlight-color);
   padding: 8px 0;
   white-space: nowrap;
@@ -93,16 +127,17 @@ nav a:hover {
   box-sizing: border-box;
   position: relative;
   z-index: 50;
+  border-bottom: 1px solid rgba(255,255,255,0.1); /* ✅ Borda adicionada */
 }
 
 .ticker p {
   display: inline-block;
   padding-left: 100%;
-  animation: ticker 25s linear infinite;
+  animation: ticker 25s linear infinite; /* ✅ Duração ajustada para mais conteúdo */
 }
 
 .ticker:hover p {
-  animation-play-state: paused;
+  animation-play-state: paused; /* Pausa a animação no hover */
 }
 
 .ticker a {
@@ -112,7 +147,7 @@ nav a:hover {
   transition: color 0.3s ease;
 }
 
-tícker a:hover {
+.ticker a:hover {
   color: white;
   text-decoration: underline;
 }
@@ -124,13 +159,34 @@ tícker a:hover {
 
 /* Seções Gerais */
 .section {
-  padding: 60px 0;
+  padding: 60px 0; /* Padding vertical, horizontal handled by container */
   position: relative;
   z-index: 10;
 }
 
-/* Hero Section */
-.hero {
+.section .container { /* ✅ Garante padding lateral dentro das seções */
+  padding: 0 2cm;
+}
+
+.section h2 {
+  color: var(--primary-color);
+  margin-bottom: 40px;
+  text-align: center;
+  font-size: 2rem;
+  display: flex; /* Para alinhar ícone com texto */
+  align-items: center;
+  justify-content: center;
+}
+
+.section h2 img { /* ✅ Estilo para ícones nos títulos de seção */
+  width: 32px;
+  height: 32px;
+  margin-right: 15px;
+  vertical-align: middle;
+}
+
+/* Hero Section (Home Page) */
+.hero { /* Estilos específicos para o Hero da Home */
   text-align: center;
   padding: 80px 0;
 }
@@ -139,6 +195,7 @@ tícker a:hover {
   font-size: 3rem;
   margin-bottom: 20px;
 }
+
 .hero p {
   max-width: 800px;
   margin: 20px auto;
@@ -150,7 +207,7 @@ tícker a:hover {
   list-style: none;
   padding: 0;
   margin: 20px auto 40px auto;
-  max-width: 400px;
+  max-width: 400px; /* Limita a largura da lista */
   text-align: left;
 }
 
@@ -174,19 +231,39 @@ tícker a:hover {
   padding: 15px 30px;
 }
 
-/* Cards */
+/* ✅ Hero Section (Radar 360 Page) */
+.hero-radar {
+  text-align: center;
+  padding: 80px 0;
+}
+
+.hero-radar h2 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero-radar p {
+  max-width: 900px;
+  margin: 20px auto 40px auto;
+  font-size: 1.2rem;
+  line-height: 1.7;
+  color: var(--text-color-light);
+}
+
+
+/* Cards (Soluções Consultivas, Ecossistema, etc.) */
 .cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
-  margin-top: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* ✅ Cards um pouco maiores */
+  gap: 30px; /* ✅ Mais espaçamento entre cards */
+  margin-top: 20px;
 }
 
 .card {
   border: 1px solid var(--card-border);
-  padding: 30px;
-  border-radius: 15px;
-  background-color: rgba(255,255,255,0.03);
+  padding: 30px; /* ✅ Mais padding interno */
+  border-radius: 15px; /* ✅ Bordas mais arredondadas */
+  background-color: rgba(255,255,255,0.03); /* ✅ Leve transparência */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   display: flex;
   flex-direction: column;
@@ -194,22 +271,22 @@ tícker a:hover {
 }
 
 .card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  transform: translateY(-8px); /* ✅ Efeito hover mais pronunciado */
+  box-shadow: 0 10px 20px rgba(212, 175, 55, 0.2); /* ✅ Sombra dourada */
 }
 
 .card h3 {
   color: var(--primary-color);
   margin-top: 0;
   margin-bottom: 15px;
-  font-size: 1.4rem;
+  font-size: 1.5rem; /* ✅ Fonte maior para títulos */
 }
 
 .card p {
-  font-size: 1rem;
-  line-height: 1.5;
+  font-size: 1rem; /* ✅ Fonte maior para texto */
+  line-height: 1.6;
   margin-bottom: 15px;
-  color: var(--text-color-light);
+  color: rgba(255,255,255,0.8); /* ✅ Cor mais suave */
 }
 
 .card ul {
@@ -233,12 +310,43 @@ tícker a:hover {
   top: 0;
 }
 
+.card a { /* ✅ Estilo para links dentro de cards */
+  color: var(--highlight-color);
+  text-decoration: none;
+  font-weight: 600;
+  margin-top: 15px;
+  display: inline-block; /* Para aplicar margin-top */
+}
+
+.card a:hover {
+  text-decoration: underline;
+  color: white;
+}
+
+/* ✅ Estilo para texto 'Em desenvolvimento' */
+.card small {
+  display: flex;
+  align-items: center;
+  font-size: 0.85rem;
+  color: var(--text-color-light);
+  margin-top: 10px;
+}
+
+.card small img {
+  width: 16px;
+  height: 16px;
+  margin-right: 5px;
+  vertical-align: middle;
+  filter: brightness(1.2);
+}
+
+
 /* Botão CTA Geral */
 .cta-button {
   display: inline-block;
   background-color: var(--primary-color);
   color: black;
-  padding: 12px 25px;
+  padding: 12px 25px; /* ✅ Botão maior */
   border: none;
   border-radius: 30px;
   cursor: pointer;
@@ -287,9 +395,10 @@ tícker a:hover {
 
 .sidebar a img {
   width: 24px;
-  height: 24px;
+  height: 24px; /* Garante proporção */
   margin-right: 15px;
   flex-shrink: 0;
+  filter: brightness(1.5); /* ✅ Ícones mais visíveis no fundo escuro */
 }
 
 .sidebar a span {
@@ -311,13 +420,14 @@ tícker a:hover {
   filter: brightness(1.5);
 }
 
-/* Botões Flutuantes */
+/* ✅ Botões Flutuantes */
 .floating-buttons {
   position: fixed;
   bottom: 20px;
-  right: 20px;
+  left: 20px; /* ✅ Posicionado à esquerda */
   display: flex;
   gap: 10px;
+  z-index: 999; /* Garante que fiquem acima de outros elementos */
 }
 
 .whatsapp-button, .specialist-button {
@@ -333,13 +443,15 @@ tícker a:hover {
 .whatsapp-button {
   background-color: #25D366;
   color: white;
-  width: 50px;
+  width: auto; /* ✅ Ajustado para conter texto */
   height: 50px;
+  padding: 12px 18px; /* ✅ Padding para texto */
 }
 
 .whatsapp-button img {
-  width: 30px;
-  height: 30px;
+  width: 24px; /* ✅ Tamanho do ícone */
+  height: 24px;
+  margin-right: 8px; /* ✅ Espaçamento entre ícone e texto */
 }
 
 .specialist-button {
@@ -357,8 +469,8 @@ tícker a:hover {
 
 /* Footer Premium */
 footer {
-  background-color: var(--secondary-background);
-  padding: 40px 0;
+  background-color: var(--secondary-background); /* ✅ Cor de fundo do footer */
+  padding: 40px 0; /* Padding vertical, horizontal handled by container */
   text-align: center;
   border-top: 1px solid var(--card-border);
   position: relative;
@@ -398,6 +510,20 @@ footer p {
   transform: translateY(-5px);
 }
 
+/* ✅ Estilos para seções de conteúdo do Radar 360 */
+.radar-section {
+  margin-top: 60px; /* Espaçamento entre as seções */
+}
+
+.radar-section:first-of-type {
+  margin-top: 0; /* Remove margin-top da primeira seção após o hero */
+}
+
+.cta-radar { /* Estilo para o CTA final do Radar */
+  text-align: center;
+}
+
+
 /* Media Queries para Responsividade */
 @media (max-width: 768px) {
   body {
@@ -432,6 +558,9 @@ footer p {
   .container {
     padding: 0 20px;
   }
+  .section .container { /* ✅ Garante padding lateral em mobile para seções */
+    padding: 0 20px;
+  }
   .hero h2 {
     font-size: 2rem;
   }
@@ -441,24 +570,38 @@ footer p {
   .cards {
     grid-template-columns: 1fr;
   }
-  .whatsapp-button, .specialist-button {
+  /* ✅ Ajustes para botões flutuantes em mobile */
+  .floating-buttons {
     bottom: 10px;
-    right: 10px;
-    width: 45px;
+    left: 10px; /* Mantém à esquerda em mobile */
+    right: auto; /* Remove o right */
+    gap: 8px; /* Ajusta o espaçamento */
+  }
+  .whatsapp-button, .specialist-button {
+    width: auto; /* ✅ Ajustado para auto em mobile */
     height: 45px;
-    font-size: 20px;
+    font-size: 0.9rem; /* ✅ Ajusta fonte */
+    padding: 10px 15px; /* ✅ Ajusta padding */
   }
   .whatsapp-button img {
-    width: 25px;
-    height: 25px;
+    width: 20px;
+    height: 20px;
   }
   .specialist-button {
-    top: auto;
-    left: 10px;
-    bottom: 10px;
-    transform: none;
-    padding: 10px 15px;
+    padding: 10px 15px; /* Ajusta padding */
+    font-size: 0.9rem; /* Ajusta fonte */
+  }
+
+  /* ✅ Ajustes específicos para Radar 360 em mobile */
+  .hero-radar h2 {
+    font-size: 2rem;
+  }
+  .hero-radar p {
     font-size: 1rem;
-    border-radius: 20px;
+  }
+  .section h2 img {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
   }
 }

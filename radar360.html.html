@@ -3,461 +3,123 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Radar 360 | Inteligência, Dados e Simuladores - OLV Internacional</title>
+  <title>Radar 360 | OLV Internacional - Dados, Inteligência e Simuladores</title>
 
-  <!-- ✅ SEO -->
-  <meta name="description" content="Acesse cotações em tempo real, simuladores de custos, dados de mercado, fretes internacionais e insights estratégicos. O Radar 360 da OLV Internacional é sua central de inteligência para decisões seguras.">
-  <meta name="keywords" content="Radar 360, Inteligência de Mercado, Cotações, Simuladores, Comércio Exterior, Supply Chain, Logística, Dados em Tempo Real, Insights, Planejamento, Exportação, Importação, OLV Internacional">
+  <!-- SEO Otimizado para Radar 360 -->
+  <meta name="description" content="Acesse o Radar 360 da OLV Internacional: dados em tempo real, inteligência de mercado e simuladores para otimizar suas operações de Supply Chain, Comércio Exterior e Logística Internacional.">
+  <meta name="keywords" content="Radar 360, Dados em Tempo Real, Inteligência de Mercado, Simuladores, Comércio Exterior, Supply Chain, Logística Internacional, Câmbio, Fretes, Notícias Comex, OLV Internacional">
   <meta name="author" content="OLV Internacional">
 
-  <!-- ✅ Open Graph -->
-  <meta property="og:title" content="Radar 360 | Inteligência, Dados e Simuladores - OLV Internacional">
-  <meta property="og:description" content="Sua central de inteligência com dados em tempo real, simuladores e insights para Supply Chain, Comércio Exterior e Logística Internacional.">
-  <meta property="og:image" content="images/preview-radar.png"> <!-- Sugestão: criar uma imagem específica para o Radar -->
+  <!-- Open Graph e Twitter Cards para Radar 360 -->
+  <meta property="og:title" content="Radar 360 OLV Internacional | Sua Central de Inteligência Global">
+  <meta property="og:description" content="Ferramentas e insights para operar com segurança e estratégia no mercado global. Cotações, fretes, notícias e muito mais.">
+  <meta property="og:image" content="images/radar360-preview.png"> <!-- ✅ Substituir por imagem específica do Radar 360 -->
   <meta property="og:url" content="https://olvinternacional.com.br/radar360.html">
   <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Radar 360 OLV Internacional | Sua Central de Inteligência Global">
+  <meta name="twitter:description" content="Ferramentas e insights para operar com segurança e estratégia no mercado global. Cotações, fretes, notícias e muito mais.">
+  <meta name="twitter:image" content="images/radar360-preview.png"> <!-- ✅ Substituir por imagem específica do Radar 360 -->
 
-  <!-- ✅ Favicon e Estilo -->
-  <link rel="icon" href="images/favicon.png"> <!-- Usar o favicon principal ou criar um específico -->
+  <!-- Favicon e Estilos -->
+  <link rel="icon" href="images/favicon.png">
   <link rel="stylesheet" href="css/style.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
+  <!-- Script JS -->
   <script defer src="js/script.js"></script>
-
-  <!-- ✅ Estilos Inline Temporários para Visualização Rápida (Serão movidos para style.css) -->
-  <style>
-    :root {
-      --primary-color: #d4af37; /* Dourado OLV */
-      --background-color: #0a0f1a; /* Azul Escuro OLV */
-      --highlight-color: #1E90FF; /* Azul Vibrante para Links */
-      --card-border: #d4af37; /* Borda Dourada */
-      --font-color: white;
-      --secondary-background: #12161f; /* Fundo para Sidebar/Header */
-    }
-
-    body {
-      background-color: var(--background-color);
-      color: var(--font-color);
-      font-family: 'Inter', sans-serif;
-      margin: 0;
-      padding-left: 60px; /* Espaço para a sidebar */
-    }
-
-    .container {
-      max-width: 1400px;
-      margin: 0 auto;
-      padding: 0 20px; /* Padding lateral de ~2cm */
-    }
-
-    header {
-      background-color: var(--secondary-background);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 15px 20px; /* Ajustado para container */
-      border-bottom: 1px solid var(--card-border);
-    }
-
-    header h1 {
-      color: var(--primary-color);
-      margin: 0;
-      font-size: 1.8rem;
-    }
-
-    nav a {
-      color: var(--font-color);
-      margin: 0 10px;
-      text-decoration: none;
-      font-weight: 600;
-      transition: color 0.3s ease;
-    }
-
-    nav a:hover {
-      color: var(--highlight-color);
-    }
-
-    .ticker {
-      background-color: #000;
-      color: var(--highlight-color);
-      padding: 8px 0; /* Ajustado para container */
-      white-space: nowrap;
-      overflow: hidden;
-      box-sizing: border-box;
-      border-bottom: 1px solid rgba(255,255,255,0.1);
-    }
-
-    .ticker .container p {
-      display: inline-block;
-      padding-left: 100%;
-      animation: ticker 20s linear infinite; /* Ajuste a duração conforme o conteúdo */
-    }
-
-    .ticker a {
-        color: var(--highlight-color);
-        text-decoration: none;
-        margin: 0 15px;
-        transition: color 0.3s ease;
-    }
-
-    .ticker a:hover {
-        color: white;
-        text-decoration: underline;
-    }
-
-    @keyframes ticker {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-100%); }
-    }
-
-    .section {
-      padding: 60px 0; /* Ajustado para container */
-    }
-
-    .section h2 {
-      color: var(--primary-color);
-      text-align: center;
-      margin-bottom: 40px;
-      font-size: 2rem;
-    }
-
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Cards um pouco maiores */
-      gap: 30px; /* Mais espaçamento entre cards */
-      margin-top: 20px;
-    }
-
-    .card {
-      border: 1px solid var(--card-border);
-      padding: 30px; /* Mais padding interno */
-      border-radius: 10px;
-      background-color: rgba(255,255,255,0.03); /* Leve transparência */
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-
-    .card:hover {
-      transform: translateY(-8px); /* Efeito hover mais pronunciado */
-      box-shadow: 0 10px 20px rgba(212, 175, 55, 0.2); /* Sombra dourada */
-    }
-
-    .card h3 {
-      color: var(--primary-color);
-      margin-top: 0;
-      font-size: 1.5rem; /* Fonte maior para títulos */
-      margin-bottom: 15px;
-    }
-
-    .card p {
-        font-size: 1rem; /* Fonte maior para texto */
-        line-height: 1.6;
-        color: rgba(255,255,255,0.8);
-    }
-
-    .card ul {
-      padding-left: 25px; /* Mais padding na lista */
-      margin-top: 15px;
-    }
-
-    .card ul li {
-      margin-bottom: 10px; /* Mais espaçamento entre itens da lista */
-      line-height: 1.5;
-      color: rgba(255,255,255,0.9);
-    }
-
-    .card a {
-        color: var(--highlight-color);
-        text-decoration: none;
-        font-weight: 600;
-        margin-top: 15px;
-        display: inline-block; /* Para aplicar margin-top */
-    }
-
-    .card a:hover {
-        text-decoration: underline;
-        color: white;
-    }
-
-    .cta-button {
-      display: inline-block;
-      background-color: var(--primary-color);
-      color: black;
-      padding: 12px 25px; /* Botão maior */
-      border-radius: 30px;
-      text-decoration: none;
-      margin-top: 25px;
-      font-weight: bold;
-      transition: background-color 0.3s ease, color 0.3s ease;
-    }
-
-    .cta-button:hover {
-      background-color: var(--highlight-color);
-      color: white;
-    }
-
-    /* Estilos para a Sidebar */
-    .sidebar {
-      position: fixed;
-      left: 0;
-      top: 0;
-      width: 60px;
-      height: 100%;
-      background-color: var(--secondary-background);
-      border-right: 1px solid var(--card-border);
-      transition: width 0.3s ease;
-      overflow-x: hidden;
-      z-index: 999;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding-top: 20px;
-    }
-
-    .sidebar:hover {
-      width: 240px; /* Largura expandida */
-    }
-
-    .sidebar a {
-      display: flex;
-      align-items: center;
-      padding: 15px;
-      color: var(--font-color);
-      text-decoration: none;
-      width: 100%; /* Ocupa a largura total no hover */
-      transition: background-color 0.3s ease;
-    }
-
-    .sidebar a img {
-      width: 24px;
-      margin-right: 15px;
-      filter: brightness(1.5); /* Ícones mais visíveis no fundo escuro */
-    }
-
-    .sidebar a span {
-      opacity: 0;
-      transition: opacity 0.3s ease;
-      white-space: nowrap;
-      font-weight: 600;
-    }
-
-    .sidebar:hover a span {
-      opacity: 1;
-    }
-
-    .sidebar a:hover {
-      background-color: rgba(255, 255, 255, 0.08); /* Fundo levemente mais claro no hover */
-    }
-
-    /* Estilos para o Footer */
-    footer {
-      padding: 30px 20px; /* Ajustado para container */
-      text-align: center;
-      border-top: 1px solid rgba(255,255,255,0.1);
-      margin-top: 50px;
-      background-color: var(--secondary-background);
-    }
-
-    footer p {
-        margin-bottom: 15px;
-        color: rgba(255,255,255,0.7);
-    }
-
-    .social-icons a {
-      margin: 0 10px;
-      text-decoration: none;
-      display: inline-block;
-      transition: transform 0.3s ease;
-    }
-
-    .social-icons a:hover {
-        transform: scale(1.1);
-    }
-
-    .social-icons img {
-        width: 24px; /* Tamanho dos ícones sociais */
-        filter: brightness(1.5); /* Ícones mais visíveis */
-    }
-
-    /* Estilos para Botões Flutuantes */
-    .whatsapp-button, .specialist-button {
-      position: fixed;
-      bottom: 30px; /* Distância da parte inferior */
-      z-index: 1000;
-      border-radius: 30px; /* Bordas arredondadas */
-      padding: 12px 18px; /* Padding */
-      font-weight: bold;
-      text-decoration: none;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.3); /* Sombra */
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .whatsapp-button {
-      right: 30px; /* Distância da direita */
-      background-color: #25D366; /* Verde WhatsApp */
-      color: white;
-      display: flex;
-      align-items: center;
-    }
-
-    .whatsapp-button img {
-        width: 24px;
-        margin-right: 8px;
-        filter: brightness(1.2);
-    }
-
-    .specialist-button {
-      left: 30px; /* Distância da esquerda */
-      background-color: var(--primary-color); /* Dourado OLV */
-      color: black;
-      display: flex;
-      align-items: center;
-    }
-
-     /* Responsividade básica */
-    @media (max-width: 768px) {
-        body {
-            padding-left: 0; /* Remove padding da sidebar em mobile */
-        }
-        .sidebar {
-            width: 100%;
-            height: auto;
-            position: relative; /* Sidebar fica no fluxo do documento em mobile */
-            flex-direction: row;
-            justify-content: center;
-            padding: 10px 0;
-            border-right: none;
-            border-bottom: 1px solid var(--card-border);
-        }
-        .sidebar:hover {
-            width: 100%; /* Não expande em largura em mobile */
-        }
-        .sidebar a {
-            padding: 10px;
-            justify-content: center;
-        }
-         .sidebar a span {
-            opacity: 1; /* Texto sempre visível em mobile */
-            margin-left: 8px;
-         }
-         .sidebar a img {
-             margin-right: 0;
-         }
-        .sidebar:hover a span {
-             opacity: 1;
-        }
-        .content {
-            margin-left: 0; /* Remove margin do conteúdo em mobile */
-        }
-        .sidebar:hover ~ .content {
-            margin-left: 0;
-        }
-        .hero h2 {
-            font-size: 2rem;
-        }
-        .section {
-            padding: 40px 20px;
-        }
-        .cards {
-            grid-template-columns: 1fr; /* Uma coluna em mobile */
-        }
-        .whatsapp-button, .specialist-button {
-            bottom: 15px;
-            padding: 10px 15px;
-            font-size: 0.9rem;
-        }
-        .whatsapp-button {
-            right: 15px;
-        }
-        .specialist-button {
-            left: 15px;
-        }
-         .whatsapp-button img {
-            width: 20px;
-            margin-right: 5px;
-        }
-    }
-  </style>
 </head>
-
 <body>
 
-<!-- 🔰 Sidebar Premium com Ícones SVG e Hover Inteligente -->
+<!-- ✅ Sidebar Premium com Ícones SVG e Hover Inteligente -->
 <div class="sidebar">
-  <a href="stratevo.html">
-    <img src="icons/stratevo.svg" alt="Stratevo"> <span>STRATEVO</span>
+  <a href="stratevo.html" title="STRATEVO - Inteligência Empresarial">
+    <img src="icons/stratevo.svg" alt="STRATEVO">
+    <span>STRATEVO</span>
   </a>
-  <a href="exceltta.html">
-    <img src="icons/exceltta.svg" alt="Exceltta"> <span>EXCELTTA</span>
+  <a href="exceltta.html" title="EXCELTTA - Inteligência em Licitações">
+    <img src="icons/exceltta.svg" alt="EXCELTTA">
+    <span>EXCELTTA</span>
   </a>
-  <a href="connecta.html">
-    <img src="icons/connecta.svg" alt="Connecta"> <span>OLV CONNECTA</span>
+  <a href="connecta.html" title="OLV CONNECTA - Hub de Fornecedores">
+    <img src="icons/connecta.svg" alt="OLV CONNECTA">
+    <span>OLV CONNECTA</span>
   </a>
-  <a href="veritus.html">
-    <img src="icons/veritus.svg" alt="Veritus"> <span>OLV VERITUS</span>
+  <a href="veritus.html" title="OLV VERITUS - Compliance e Due Diligence">
+    <img src="icons/veritus.svg" alt="OLV VERITUS">
+    <span>OLV VERITUS</span>
   </a>
-  <a href="finx.html">
-    <img src="icons/finx.svg" alt="Finx"> <span>OLV FINX</span>
+  <a href="finx.html" title="OLV FINX - Gestão Financeira">
+    <img src="icons/finx.svg" alt="OLV FINX">
+    <span>OLV FINX</span>
   </a>
-  <a href="academy.html">
-    <img src="icons/academy.svg" alt="Academy"> <span>OLV ACADEMY</span>
+  <a href="academy.html" title="OLV ACADEMY - Educação Corporativa">
+    <img src="icons/academy.svg" alt="OLV ACADEMY">
+    <span>OLV ACADEMY</span>
   </a>
-  <a href="labs.html">
-    <img src="icons/labs.svg" alt="Labs"> <span>OLV LABS</span>
+  <a href="labs.html" title="OLV LABS - Inovação e IA">
+    <img src="icons/labs.svg" alt="OLV LABS">
+    <span>OLV LABS</span>
   </a>
-  <a href="ventures.html">
-    <img src="icons/ventures.svg" alt="Ventures"> <span>OLV VENTURES</span>
+  <a href="ventures.html" title="OLV VENTURES - Venture Builder">
+    <img src="icons/ventures.svg" alt="OLV VENTURES">
+    <span>OLV VENTURES</span>
   </a>
-  <a href="core.html">
-    <img src="icons/core.svg" alt="Core"> <span>OLV CORE</span>
+  <a href="core.html" title="OLV CORE - Cockpit de Gestão 360°">
+    <img src="icons/core.svg" alt="OLV CORE">
+    <span>OLV CORE</span>
   </a>
 </div>
 
-<!-- �� Header -->
 <header>
   <div class="container">
-    <h1>OLV INTERNACIONAL</h1>
+    <!-- ✅ Logo e Slogan Integrados -->
+    <div class="logo-slogan">
+      <a href="index.html" class="logo-link">
+        <img src="images/olv-logo.svg" alt="OLV Internacional Logo" class="olv-logo">
+        <span class="olv-slogan">Integramos Estratégia, Operação e Resultado</span>
+      </a>
+    </div>
     <nav>
       <a href="index.html">Home</a>
       <a href="sobre.html">Sobre</a>
       <a href="solucoes.html">Soluções</a>
       <a href="ecossistema.html">Ecossistema</a>
-      <a href="radar360.html">Radar 360</a>
+      <a href="radar360.html" class="active">Radar 360</a> <!-- ✅ Link ativo para a página atual -->
       <a href="blog.html">Blog</a>
       <a href="contato.html">Contato</a>
     </nav>
   </div>
 </header>
 
-<!-- �� Ticker News Dinâmico e Clicável -->
+<!-- ✅ Ticker Dinâmico e Clicável -->
 <div class="ticker">
   <div class="container">
     <p>
-      <a href="radar360.html">🚀 Radar 360 Ativo</a> |
-      <a href="https://www.bcb.gov.br/estatisticas/mercadoabertodadosdiarios" >🌍 Câmbio em Tempo Real</a> |
-      <a href="solucoes.html">💼 Consultoria Premium</a> |
-      <a href="https://comexstat.mdic.gov.br/" >📊 Dados do Comércio Exterior</a> |
+      <a href="radar360.html" target="_blank">�� Radar 360 Ativo</a> |
+      <a href="https://www.bcb.gov.br/estatisticas/mercadoabertodiario" target="_blank">�� Câmbio em Tempo Real</a> |
+      <a href="solucoes.html">�� Consultoria Premium</a> |
+      <a href="https://comexstat.mdic.gov.br/" target="_blank">📊 Dados do Comércio Exterior</a> |
       <a href="contato.html">�� Fale com um Especialista</a>
     </p>
   </div>
 </div>
 
-<!-- 🚀 Hero Section - Radar 360 -->
+<!-- �� Hero Section - Radar 360 -->
 <section class="section hero">
   <div class="container">
-    <h2>�� OLV Radar 360 – Central de Inteligência & Dados</h2>
+    <h2><img src="icons/rocket.svg" alt="Rocket Icon" class="section-icon"> OLV Radar 360 – Central de Inteligência & Dados</h2>
     <p>Informação estratégica, cotações, simuladores e inteligência em tempo real para Supply Chain, Comércio Exterior e Gestão Empresarial. Sua ferramenta essencial para decisões rápidas e seguras.</p>
     <a href="contato.html" class="cta-button">Fale com um Especialista</a>
   </div>
 </section>
 
-<!-- �� Blocos de Conteúdo do Radar 360 -->
-<main class="section">
+<!-- ✅ Blocos de Conteúdo do Radar 360 -->
+<main class="section radar360-main-content">
   <div class="container">
 
-    <section class="dados">
-      <h2>🪙 Cotações em Tempo Real</h2>
+    <section class="data-section">
+      <h2><img src="icons/currency-exchange.svg" alt="Currency Icon" class="section-icon"> Cotações em Tempo Real</h2>
       <div class="cards">
           <div class="card">
               <h3>Dólar Comercial</h3>
@@ -477,39 +139,39 @@
            <div class="card">
               <h3>Outras Moedas</h3>
               <p>Consulte cotações de outras moedas globais.</p>
-              <a href="https://www.xe.com/currencyconverter/" >Acessar Conversor</a>
+              <a href="https://www.xe.com/currencyconverter/" target="_blank">Acessar Conversor</a>
           </div>
       </div>
     </section>
 
-    <section class="simuladores" style="margin-top: 60px;">
-      <h2>🔄 Simuladores e Calculadoras</h2>
+    <section class="data-section">
+      <h2><img src="icons/calculator.svg" alt="Calculator Icon" class="section-icon"> Simuladores e Calculadoras</h2>
       <div class="cards">
           <div class="card">
               <h3>Simulador de Custos de Importação</h3>
               <p>Calcule impostos, fretes e taxas para sua operação de importação.</p>
-              <a href="#">Abrir Simulador</a> <!-- Link para a ferramenta interna -->
+              <a href="#" class="cta-button small-cta">Abrir Simulador</a> <!-- Link para a ferramenta interna -->
           </div>
           <div class="card">
               <h3>Calculadora de Fretes Internacionais</h3>
               <p>Estime custos de frete aéreo, marítimo e rodoviário.</p>
-               <a href="#">Abrir Calculadora</a> <!-- Link para a ferramenta interna -->
+               <a href="#" class="cta-button small-cta">Abrir Calculadora</a> <!-- Link para a ferramenta interna -->
           </div>
           <div class="card">
               <h3>Simulador Cambial</h3>
               <p>Converta valores entre diferentes moedas com taxas atualizadas.</p>
-              <a href="https://www.oanda.com/currency/converter/" >Acessar Simulador</a>
+              <a href="https://www.oanda.com/currency/converter/" target="_blank">Acessar Simulador</a>
           </div>
            <div class="card">
               <h3>Simulador Tributário Comex</h3>
               <p>Entenda a carga tributária para seus produtos na importação e exportação.</p>
-               <a href="#">Abrir Simulador</a> <!-- Link para a ferramenta interna -->
+               <a href="#" class="cta-button small-cta">Abrir Simulador</a> <!-- Link para a ferramenta interna -->
           </div>
       </div>
     </section>
 
-     <section class="logistica-monitor" style="margin-top: 60px;">
-      <h2>�� Monitoramento Logístico & Freight Rates (Em breve)</h2>
+     <section class="data-section">
+      <h2><img src="icons/truck-gear.svg" alt="Truck Gear Icon" class="section-icon"> Monitoramento Logístico & Freight Rates (Em breve)</h2>
       <div class="cards">
           <div class="card">
               <h3>Monitor de Fretes Internacionais</h3>
@@ -519,43 +181,42 @@
            <div class="card">
               <h3>Status de Portos e Aeroportos</h3>
               <p>Informações sobre congestionamentos, greves e status operacional.</p>
-               <small>🛠️ Em desenvolvimento.</small>
-          </div>
-      </div>
-    </section>
-
-     <section class="dashboard-economico" style="margin-top: 60px;">
-      <h2>�� Dashboard Econômico & Logístico (Fase 2)</h2>
-      <div class="cards">
-          <div class="card">
-              <h3>Indicadores de Comércio Exterior</h3>
-              <p>Balança comercial, fluxo de exportação/importação por setor e país.</p>
-              <small>🛠️ Em desenvolvimento.</small>
-          </div>
-           <div class="card">
-              <h3>Indicadores Macroeconômicos</h3>
-              <p>PIB, inflação, taxa de juros e outros dados relevantes para negócios globais.</p>
                <small>��️ Em desenvolvimento.</small>
           </div>
       </div>
     </section>
 
-
-    <section class="links-uteis" style="margin-top: 60px;">
-      <h2>�� Legislação, Compliance & Recursos Oficiais</h2>
+     <section class="data-section">
+      <h2><img src="icons/dashboard-chart.svg" alt="Dashboard Icon" class="section-icon"> Dashboard Econômico & Logístico (Fase 2)</h2>
       <div class="cards">
-          <div class="card"><a href="https://www.gov.br/receitafederal" ><h3>Receita Federal</h3><p>Legislação aduaneira, tributária e normas.</p></a></div>
-          <div class="card"><a href="https://comexstat.mdic.gov.br/" ><h3>Comex Stat</h3><p>Estatísticas detalhadas de importação e exportação do Brasil.</p></a></div>
-          <div class="card"><a href="https://www.aladi.org/" ><h3>ALADI</h3><p>Associação Latino-Americana de Integração.</p></a></div>
-          <div class="card"><a href="https://www.incoterms2020.org/" ><h3>Incoterms 2020</h3><p>Regras oficiais para o uso de termos comerciais.</p></a></div>
-          <div class="card"><a href="https://www.portosdobrasil.gov.br/" ><h3>Portos do Brasil</h3><p>Informações sobre portos e terminais brasileiros.</p></a></div>
-          <div class="card"><a href="https://www.anvisa.gov.br/" ><h3>ANVISA</h3><p>Regulamentação sanitária para importação/exportação.</p></a></div>
-          <div class="card"><a href="https://www.gov.br/agricultura/" ><h3>MAPA – Agricultura</h3><p>Normas e procedimentos para produtos agrícolas.</p></a></div>
+          <div class="card">
+              <h3>Indicadores de Comércio Exterior</h3>
+              <p>Balança comercial, fluxo de exportação/importação por setor e país.</p>
+              <small>��️ Em desenvolvimento.</small>
+          </div>
+           <div class="card">
+              <h3>Indicadores Macroeconômicos</h3>
+              <p>PIB, inflação, taxa de juros e outros dados relevantes para negócios globais.</p>
+               <small>🛠️ Em desenvolvimento.</small>
+          </div>
       </div>
     </section>
 
-    <section class="noticias" style="margin-top: 60px;">
-      <h2>�� Notícias & Insights</h2>
+    <section class="data-section">
+      <h2><img src="icons/link-document.svg" alt="Link Document Icon" class="section-icon"> Legislação, Compliance & Recursos Oficiais</h2>
+      <div class="cards">
+          <div class="card"><a href="https://www.gov.br/receitafederal" target="_blank"><h3>Receita Federal</h3><p>Legislação aduaneira, tributária e normas.</p></a></div>
+          <div class="card"><a href="https://comexstat.mdic.gov.br/" target="_blank"><h3>Comex Stat</h3><p>Estatísticas detalhadas de importação e exportação do Brasil.</p></a></div>
+          <div class="card"><a href="https://www.aladi.org/" target="_blank"><h3>ALADI</h3><p>Associação Latino-Americana de Integração.</p></a></div>
+          <div class="card"><a href="https://www.incoterms2020.org/" target="_blank"><h3>Incoterms 2020</h3><p>Regras oficiais para o uso de termos comerciais.</p></a></div>
+          <div class="card"><a href="https://www.portosdobrasil.gov.br/" target="_blank"><h3>Portos do Brasil</h3><p>Informações sobre portos e terminais brasileiros.</p></a></div>
+          <div class="card"><a href="https://www.anvisa.gov.br/" target="_blank"><h3>ANVISA</h3><p>Regulamentação sanitária para importação/exportação.</p></a></div>
+          <div class="card"><a href="https://www.gov.br/agricultura/" target="_blank"><h3>MAPA – Agricultura</h3><p>Normas e procedimentos para produtos agrícolas.</p></a></div>
+      </div>
+    </section>
+
+    <section class="data-section">
+      <h2><img src="icons/newspaper.svg" alt="Newspaper Icon" class="section-icon"> Notícias & Insights</h2>
       <div class="card">
         <h3>Feed de Notícias do Mercado Global</h3>
         <p>Atualizações sobre Comércio Exterior, Logística, Supply Chain, Economia e PMEs.</p>
@@ -564,7 +225,7 @@
     </section>
 
     <!-- CTA Final -->
-    <section class="cta" style="margin-top: 60px; text-align: center;">
+    <section class="cta-final">
         <h2>Quer ir além dos dados?</h2>
         <p>O Radar 360 é uma amostra da inteligência que a OLV Internacional entrega. Fale com nossos especialistas para soluções personalizadas.</p>
         <a href="contato.html" class="cta-button">Fale com um Especialista</a>
@@ -573,37 +234,36 @@
   </div>
 </main>
 
-
-<!-- �� Footer Premium com Ícones SVG -->
+<!-- ✅ Footer Premium com Ícones SVG -->
 <footer>
   <div class="container">
     <p>&copy; 2025 OLV INTERNACIONAL | CNPJ 67.867.580/0001-90 | Desenvolvido com excelência pelo Ecossistema OLV CORE</p>
     <div class="social-icons">
-      <a href="https://instagram.com/olvinternacional" >
+      <a href="https://instagram.com/olvinternacional" target="_blank" title="Instagram OLV Internacional">
         <img src="icons/instagram.svg" alt="Instagram">
       </a>
-      <a href="https://linkedin.com/in/olvinternacional" >
+      <a href="https://linkedin.com/in/olvinternacional" target="_blank" title="LinkedIn OLV Internacional">
         <img src="icons/linkedin.svg" alt="LinkedIn">
       </a>
-      <a href="https://facebook.com/olvinternacional" >
+      <a href="https://facebook.com/olvinternacional" target="_blank" title="Facebook OLV Internacional">
         <img src="icons/facebook.svg" alt="Facebook">
       </a>
-      <a href="mailto:atendimento@olvinternacional.com.br">
+      <a href="mailto:atendimento@olvinternacional.com.br" title="Enviar E-mail para OLV Internacional">
         <img src="icons/email.svg" alt="E-mail">
       </a>
     </div>
   </div>
 </footer>
 
-<!-- �� Botões Flutuantes - WhatsApp e Fale com Especialista -->
-<a href="https://wa.me/5511999999999" class="whatsapp-button" >
-  <img src="icons/whatsapp.svg" alt="WhatsApp"> WhatsApp
-</a>
-
-<a href="contato.html" class="specialist-button">
-  Fale com um Especialista
-</a>
-
+<!-- ✅ Botões Flutuantes (WhatsApp e Fale com um Especialista) -->
+<div class="floating-buttons">
+  <a href="https://wa.me/5511267514469" class="whatsapp-button" target="_blank" title="Fale conosco pelo WhatsApp">
+    <img src="icons/whatsapp.svg" alt="WhatsApp">
+  </a>
+  <a href="contato.html" class="specialist-button" title="Fale com um Especialista OLV">
+    Fale com um Especialista
+  </a>
+</div>
 
 </body>
 </html>
