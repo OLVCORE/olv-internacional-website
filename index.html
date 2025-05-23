@@ -1,107 +1,719 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OLV Internacional | Estratégia, Operação e Resultado</title>
 
-<title>OLV Internacional | Integramos Estratégia, Operação e Resultado</title>
-<meta name="description" content="A OLV Internacional oferece consultoria premium em Supply Chain, Comércio Exterior e Inteligência Empresarial. Estratégia, operação e resultados para empresas que querem crescer.">
-<meta name="keywords" content="OLV Internacional, Supply Chain, Consultoria, Comércio Exterior, Logística Internacional, Gestão Empresarial, Inteligência de Mercado, Análise de Empresas, Due Diligence, Compliance Empresarial, Planejamento Logístico, Internacionalização, Estratégia Empresarial">
-<meta name="author" content="OLV Internacional">
+  <!-- ✅ SEO Otimizado -->
+  <meta name="description" content="Consultoria premium em Supply Chain, Comércio Exterior, Logística Internacional e Internacionalização. Mais de 35 anos entregando resultados e evoluindo negócios para PMEs no Brasil e no mundo.">
+  <meta name="keywords" content="Consultoria em Comércio Exterior, Supply Chain, Logística Internacional, Exportação, Importação, Planejamento Tributário, Compliance, Due Diligence, 3PL, 4PL, Radar SISCOMEX, Internacionalização, Gestão Empresarial, Inteligência de Mercado">
+  <meta name="author" content="OLV Internacional">
 
-<!-- 🔥 Open Graph -->
-<meta property="og:title" content="OLV Internacional | Integramos Estratégia, Operação e Resultado">
-<meta property="og:description" content="Consultoria premium em Supply Chain, Comércio Exterior e Inteligência Empresarial. Cresça com controle, gestão e resultados.">
-<meta property="og:image" content="https://www.olvinternacional.com.br/images/preview.png">
-<meta property="og:url" content="https://www.olvinternacional.com.br/">
-<meta property="og:type" content="website">
+  <!-- ✅ Open Graph e Twitter Cards -->
+  <meta property="og:title" content="OLV Internacional | Integramos Estratégia, Operação e Resultado">
+  <meta property="og:description" content="Soluções premium em Supply Chain, Comércio Exterior e Logística Internacional. Evoluímos negócios com estratégia, inteligência e resultados globais.">
+  <meta property="og:image" content="images/preview.png"> <!-- Substituir por URL real -->
+  <meta property="og:url" content="https://olvinternacional.com.br"> <!-- Substituir por URL real -->
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="OLV Internacional | Integramos Estratégia, Operação e Resultado">
+  <meta name="twitter:description" content="Consultoria em Supply Chain, Comércio Exterior e Logística Internacional. Radar 360, Ecossistema OLV e soluções para negócios que querem crescer globalmente.">
+  <meta name="twitter:image" content="images/preview.png"> <!-- Substituir por URL real -->
 
-<!-- 🔥 Twitter Card -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="OLV Internacional | Integramos Estratégia, Operação e Resultado">
-<meta name="twitter:description" content="Consultoria premium em Supply Chain, Comércio Exterior e Inteligência Empresarial. Cresça com controle, gestão e resultados.">
-<meta name="twitter:image" content="https://www.olvinternacional.com.br/images/preview.png">
+  <!-- ✅ Favicon e Estilos -->
+  <link rel="icon" href="images/favicon.png"> <!-- Substituir por URL real -->
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-<link rel="icon" href="images/favicon.png">
+  <!-- ✅ Script JS -->
+  <script defer src="js/script.js"></script>
 
-<link rel="stylesheet" href="css/style.min.css">
+  <!-- Estilos básicos para visualização imediata (serão refinados no style.css) -->
+  <style>
+    :root {
+      --primary-color: #d4af37; /* Dourado OLV */
+      --background-color: #0a0f1a; /* Azul Escuro OLV */
+      --highlight-color: #1E90FF; /* Azul Vibrante para Links */
+      --card-border: #d4af37;
+      --font-color: white;
+      --secondary-background: #12161f; /* Tom mais escuro para sidebar/footer */
+    }
 
-<script defer src="js/script.min.js"></script>
+    body {
+      background-color: var(--background-color);
+      color: var(--font-color);
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding-left: 60px; /* Espaço para o sidebar */
+      overflow-x: hidden; /* Evita scroll horizontal indesejado */
+    }
+
+    .container {
+      max-width: 1400px; /* Largura máxima do conteúdo */
+      margin: 0 auto; /* Centraliza o container */
+      padding: 0 2cm; /* Margem lateral de 2cm */
+      box-sizing: border-box; /* Inclui padding na largura total */
+    }
+
+    header {
+      background-color: var(--background-color);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 2cm; /* Ajustado para usar o container ou padding direto */
+      border-bottom: 1px solid var(--card-border);
+      position: relative; /* Para z-index */
+      z-index: 100; /* Garante que o header fique acima de outros elementos */
+    }
+
+    header h1 {
+      color: var(--primary-color);
+      margin: 0;
+      font-size: 1.8rem; /* Tamanho ajustado */
+    }
+
+    nav a {
+      color: var(--font-color);
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: var(--highlight-color);
+    }
+
+    .ticker {
+      background-color: var(--secondary-background);
+      color: var(--highlight-color);
+      padding: 8px 0; /* Padding vertical, horizontal handled by content */
+      white-space: nowrap;
+      overflow: hidden;
+      box-sizing: border-box;
+      position: relative;
+      z-index: 50; /* Abaixo do header */
+    }
+
+    .ticker p {
+      display: inline-block;
+      padding-left: 100%; /* Começa fora da tela */
+      animation: ticker 25s linear infinite; /* Ajuste a duração conforme o conteúdo */
+    }
+
+    .ticker a {
+        color: var(--highlight-color); /* Cor dos links no ticker */
+        text-decoration: none;
+        margin: 0 15px; /* Espaçamento entre os itens do ticker */
+        transition: color 0.3s ease;
+    }
+
+    .ticker a:hover {
+        color: white; /* Cor no hover */
+        text-decoration: underline;
+    }
+
+
+    @keyframes ticker {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-100%); }
+    }
+
+    .section {
+      padding: 60px 0; /* Padding vertical, horizontal handled by container */
+      position: relative;
+      z-index: 10; /* Abaixo do ticker */
+    }
+
+    .section h2 {
+      color: var(--primary-color);
+      margin-bottom: 40px; /* Espaço maior abaixo do título da seção */
+      text-align: center;
+      font-size: 2rem; /* Tamanho ajustado */
+    }
+
+    .hero {
+        text-align: center;
+        padding: 80px 0; /* Mais padding no hero */
+    }
+
+    .hero h2 {
+        font-size: 3rem; /* Título maior no hero */
+        margin-bottom: 20px;
+    }
+
+    .hero p {
+        max-width: 800px; /* Largura máxima para o texto do manifesto */
+        margin: 20px auto 40px auto; /* Centraliza e adiciona espaço */
+        font-size: 1.1rem; /* Fonte um pouco maior */
+        line-height: 1.6; /* Espaçamento entre linhas */
+    }
+
+    .hero .cta-button {
+        font-size: 1.2rem; /* Botão maior no hero */
+        padding: 15px 30px;
+    }
+
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Cards maiores */
+      gap: 30px; /* Espaço maior entre cards */
+      margin-top: 30px;
+    }
+
+    .card {
+      border: 1px solid var(--card-border);
+      padding: 30px; /* Mais padding interno */
+      border-radius: 15px; /* Bordas mais arredondadas */
+      background-color: rgba(255,255,255,0.03); /* Fundo levemente visível */
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      display: flex; /* Para alinhar conteúdo */
+      flex-direction: column;
+      justify-content: space-between; /* Distribui o conteúdo verticalmente */
+    }
+
+    .card:hover {
+      transform: translateY(-8px); /* Efeito hover mais pronunciado */
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Sombra mais elegante */
+    }
+
+    .card h3 {
+      color: var(--primary-color);
+      margin-top: 0;
+      margin-bottom: 15px; /* Espaço abaixo do título do card */
+      font-size: 1.4rem; /* Título do card maior */
+    }
+
+    .card p {
+        font-size: 1rem; /* Descrição do card */
+        line-height: 1.5;
+        margin-bottom: 15px;
+    }
+
+    .card ul {
+      padding-left: 25px; /* Mais padding na lista */
+      margin-bottom: 15px;
+      list-style: none; /* Remove bullet padrão */
+    }
+
+    .card ul li {
+      margin-bottom: 10px; /* Espaço entre itens da lista */
+      position: relative;
+      padding-left: 20px; /* Espaço para o checkmark customizado */
+      font-size: 0.95rem;
+    }
+
+    .card ul li:before {
+        content: '✔️'; /* Checkmark customizado */
+        color: var(--highlight-color); /* Cor do checkmark */
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+
+
+    .cta-button {
+      display: inline-block;
+      background-color: var(--primary-color);
+      color: black;
+      padding: 12px 25px; /* Padding ajustado */
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      font-weight: bold;
+      text-decoration: none;
+      text-align: center;
+      transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+    }
+
+    .cta-button:hover {
+      background-color: var(--highlight-color);
+      color: white;
+      transform: translateY(-3px); /* Efeito sutil no hover */
+    }
+
+    /* Estilos para o Sidebar */
+    .sidebar {
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 60px; /* Largura inicial (apenas ícones) */
+      height: 100%;
+      background-color: var(--secondary-background);
+      border-right: 1px solid var(--card-border);
+      transition: width 0.3s ease; /* Animação na expansão */
+      overflow-x: hidden; /* Esconde o texto quando retraído */
+      z-index: 1000; /* Fica acima de tudo */
+      display: flex;
+      flex-direction: column;
+      padding-top: 20px; /* Espaço no topo */
+    }
+
+    .sidebar:hover {
+      width: 240px; /* Largura expandida */
+    }
+
+    .sidebar a {
+      display: flex;
+      align-items: center;
+      padding: 15px;
+      color: var(--font-color);
+      text-decoration: none;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      white-space: nowrap; /* Impede quebra de linha no texto */
+    }
+
+    .sidebar a img {
+      width: 24px; /* Tamanho dos ícones SVG */
+      margin-right: 15px; /* Espaço entre ícone e texto */
+      flex-shrink: 0; /* Impede que o ícone diminua */
+    }
+
+    .sidebar a span {
+      opacity: 0; /* Texto invisível inicialmente */
+      transition: opacity 0.3s ease; /* Animação do texto */
+      overflow: hidden; /* Garante que o texto não vaze */
+    }
+
+    .sidebar:hover a span {
+      opacity: 1; /* Texto visível no hover do sidebar */
+    }
+
+    .sidebar a:hover {
+      background-color: rgba(255, 255, 255, 0.08); /* Fundo sutil no hover do item */
+      color: var(--highlight-color); /* Cor do texto no hover do item */
+    }
+     .sidebar a:hover img {
+        filter: brightness(1.5); /* Efeito sutil nos ícones no hover */
+     }
+
+
+    /* Estilos para Botões Flutuantes */
+    .whatsapp-button, .specialist-button {
+      position: fixed;
+      z-index: 999; /* Acima da maioria dos elementos */
+      border-radius: 50px; /* Botões redondos ou pílula */
+      text-decoration: none;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px; /* Padding interno */
+    }
+
+    .whatsapp-button {
+      bottom: 20px;
+      right: 20px;
+      background-color: #25D366; /* Verde WhatsApp */
+      color: white;
+      font-size: 24px; /* Tamanho do ícone/texto */
+      width: 50px; /* Tamanho fixo */
+      height: 50px;
+    }
+
+    .whatsapp-button img {
+        width: 30px; /* Tamanho do ícone SVG */
+        height: 30px;
+    }
+
+
+    .specialist-button {
+      top: 50%; /* Alinhado verticalmente */
+      left: 20px; /* Posição na esquerda */
+      transform: translateY(-50%); /* Centraliza verticalmente */
+      background-color: var(--primary-color);
+      color: black;
+      padding: 12px 20px; /* Padding para botão pílula */
+      font-weight: bold;
+      border-radius: 30px;
+    }
+
+    .whatsapp-button:hover, .specialist-button:hover {
+        transform: scale(1.1); /* Efeito de escala no hover */
+        box-shadow: 0 5px 15px rgba(0,0,0,0.3); /* Sombra no hover */
+    }
+
+
+    /* Estilos para o Footer */
+    footer {
+      background-color: var(--secondary-background);
+      padding: 40px 2cm; /* Mais padding no footer */
+      text-align: center;
+      border-top: 1px solid var(--card-border);
+      position: relative;
+      z-index: 10;
+    }
+
+    footer .container {
+        padding: 0; /* Container já tem padding, resetar aqui */
+    }
+
+    footer p {
+      color: #ccc;
+      margin-bottom: 20px;
+      font-size: 0.9rem;
+    }
+
+    .social-icons {
+        margin-top: 20px;
+    }
+
+    .social-icons a {
+      margin: 0 15px; /* Espaço entre ícones sociais */
+      color: var(--font-color);
+      text-decoration: none;
+      display: inline-block; /* Para aplicar transform/hover */
+      transition: transform 0.3s ease, color 0.3s ease;
+    }
+
+     .social-icons a img {
+        width: 24px; /* Tamanho dos ícones sociais SVG */
+        height: 24px;
+        vertical-align: middle; /* Alinha verticalmente */
+     }
+
+
+    .social-icons a:hover {
+      color: var(--highlight-color);
+      transform: translateY(-5px); /* Efeito sutil no hover */
+    }
+
+    /* Estilos para Links Gerais no Conteúdo */
+    a {
+        color: var(--highlight-color); /* Cor azul vibrante para todos os links */
+        text-decoration: none;
+        transition: color 0.3s ease, text-decoration 0.3s ease;
+    }
+
+    a:hover {
+        color: white; /* Cor branca no hover */
+        text-decoration: underline;
+    }
+
+    /* Media Queries para Responsividade */
+    @media (max-width: 768px) {
+        body {
+            padding-left: 0; /* Remove padding do sidebar em mobile */
+        }
+        .sidebar {
+            width: 100%; /* Sidebar ocupa toda a largura em mobile */
+            height: auto; /* Altura automática */
+            position: relative; /* Não fixo em mobile */
+            flex-direction: row; /* Ícones em linha */
+            justify-content: center; /* Centraliza ícones */
+            border-right: none;
+            border-bottom: 1px solid var(--card-border);
+            padding: 10px 0;
+        }
+        .sidebar:hover {
+            width: 100%; /* Não expande em largura */
+        }
+        .sidebar a {
+            padding: 10px; /* Padding menor */
+            flex-direction: column; /* Ícone e texto em coluna */
+            align-items: center;
+        }
+         .sidebar a img {
+            margin-right: 0;
+            margin-bottom: 5px; /* Espaço entre ícone e texto */
+         }
+        .sidebar a span {
+            opacity: 1; /* Texto sempre visível em mobile */
+            font-size: 0.8rem;
+        }
+        .sidebar:hover a span {
+             opacity: 1; /* Mantém visível */
+        }
+
+        .section, header, footer {
+            padding-left: 20px; /* Padding menor em mobile */
+            padding-right: 20px;
+        }
+
+        .hero h2 {
+            font-size: 2rem; /* Título menor em mobile */
+        }
+
+        .hero p {
+            font-size: 1rem; /* Texto menor em mobile */
+        }
+
+        .cards {
+            grid-template-columns: 1fr; /* Cards em coluna única */
+        }
+
+        .whatsapp-button, .specialist-button {
+            bottom: 10px; /* Posição ajustada */
+            right: 10px;
+            width: 45px; /* Tamanho menor */
+            height: 45px;
+            font-size: 20px;
+        }
+         .whatsapp-button img {
+            width: 25px;
+            height: 25px;
+         }
+
+        .specialist-button {
+            top: auto; /* Remove alinhamento vertical fixo */
+            left: 10px;
+            bottom: 10px; /* Posição ajustada */
+            transform: none; /* Remove transform */
+            padding: 10px 15px;
+            font-size: 1rem;
+            border-radius: 20px;
+        }
+    }
+  </style>
 </head>
-
 <body>
 
-<header>
-  <h1>OLV INTERNACIONAL</h1>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="sobre.html">Sobre</a>
-    <a href="solucoes.html">Soluções</a>
-    <a href="hub.html">Ecossistema</a>
-    <a href="#blog">Blog</a>
-    <a href="contato.html">Contato</a>
-  </nav>
-</header>
-
-<div class="ticker">
-  <p>🚀 OLV CORE ativo | 💼 Novas integrações Exceltta e Connecta | 🌎 Cotações: Dólar R$5,25 | Euro R$5,65 | 🔥 STRATEVO com novas funcionalidades | 🚀 Lançamento OLV Finx e Ventures!</p>
+<!-- ✅ Sidebar Premium com Ícones SVG e Hover Inteligente -->
+<div class="sidebar">
+  <a href="stratevo.html">
+    <img src="icons/stratevo.svg" alt="STRATEVO - Inteligência Empresarial">
+    <span>STRATEVO</span>
+  </a>
+  <a href="exceltta.html">
+    <img src="icons/exceltta.svg" alt="EXCELTTA - Inteligência em Licitações">
+    <span>EXCELTTA</span>
+  </a>
+  <a href="connecta.html">
+    <img src="icons/connecta.svg" alt="OLV CONNECTA - Hub de Fornecedores">
+    <span>OLV CONNECTA</span>
+  </a>
+  <a href="veritus.html">
+    <img src="icons/veritus.svg" alt="OLV VERITUS - Compliance e Due Diligence">
+    <span>OLV VERITUS</span>
+  </a>
+  <a href="finx.html">
+    <img src="icons/finx.svg" alt="OLV FINX - Gestão Financeira">
+    <span>OLV FINX</span>
+  </a>
+  <a href="academy.html">
+    <img src="icons/academy.svg" alt="OLV ACADEMY - Educação Corporativa">
+    <span>OLV ACADEMY</span>
+  </a>
+  <a href="labs.html">
+    <img src="icons/labs.svg" alt="OLV LABS - Inovação e IA">
+    <span>OLV LABS</span>
+  </a>
+  <a href="ventures.html">
+    <img src="icons/ventures.svg" alt="OLV VENTURES - Venture Builder">
+    <span>OLV VENTURES</span>
+  </a>
+  <a href="core.html">
+    <img src="icons/core.svg" alt="OLV CORE - Cockpit de Gestão 360°">
+    <span>OLV CORE</span>
+  </a>
 </div>
 
-<section class="section" id="home">
-  <h2>Integramos Estratégia, Operação e Resultado</h2>
-  <p>Consultoria Premium em Supply Chain, Comércio Exterior, Internacionalização e Inovação. Evoluímos Negócios.</p>
-</section>
+<header>
+  <div class="container">
+    <h1>OLV INTERNACIONAL</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="sobre.html">Sobre</a>
+      <a href="solucoes.html">Soluções</a>
+      <a href="ecossistema.html">Ecossistema</a>
+      <a href="radar360.html">Radar 360</a>
+      <a href="blog.html">Blog</a>
+      <a href="contato.html">Contato</a>
+    </nav>
+  </div>
+</header>
 
-<section class="section" id="ecossistema">
-  <h2>Nosso Ecossistema</h2>
-  <div class="cards">
-    <div class="card"><h3>STRATEVO</h3><p>Inteligência de mercado, análise de empresas, benchmarking competitivo e insights estratégicos. Validação de CNPJs, matriz SWOT e análise de riscos.</p></div>
-    <div class="card"><h3>EXCELTTA</h3><p>Gestão empresarial inteligente, precificação, análise tributária, simulações de custos, margens e viabilidade para negócios e licitações.</p></div>
-    <div class="card"><h3>OLV CONNECTA</h3><p>Hub de fornecedores homologados nacionais e internacionais. Conecta empresas a fabricantes e distribuidores com segurança e rastreabilidade.</p></div>
-    <div class="card"><h3>OLV VERITUS</h3><p>Compliance, due diligence e blindagem empresarial. Análise de riscos jurídicos, comerciais e reputacionais para proteger negócios.</p></div>
-    <div class="card"><h3>OLV FINX</h3><p>Gestão financeira inteligente, fluxo de caixa, planejamento tributário e acesso a crédito. Conecta empresas a bancos, fintechs e investidores.</p></div>
-    <div class="card"><h3>OLV CORE</h3><p>Cockpit inteligente que integra todas as soluções. Visão 360º, KPIs, indicadores financeiros, pipeline de negócios e operações em tempo real.</p></div>
-    <div class="card"><h3>OLV ACADEMY</h3><p>Capacitação executiva, treinamentos, workshops e desenvolvimento de competências em supply chain, finanças, inteligência e inovação.</p></div>
-    <div class="card"><h3>OLV LABS</h3><p>Laboratório de inovação, IA, automação e desenvolvimento de APIs, bots e soluções digitais. Tecnologia aplicada ao ecossistema.</p></div>
-    <div class="card"><h3>OLV VENTURES</h3><p>Incubadora de startups e projetos inovadores. Fomenta negócios, acesso a investidores, internacionalização e venture building.</p></div>
+<!-- ✅ Ticker Dinâmico e Clicável -->
+<div class="ticker">
+  <p>
+    <a href="radar360.html">🚀 Radar 360 Ativo</a> |
+    <a href="https://www.bcb.gov.br/estatisticas/mercadoabertodiario" >�� Câmbio em Tempo Real</a> |
+    <a href="solucoes.html">💼 Consultoria Premium</a> |
+    <a href="https://comexstat.mdic.gov.br/" >📊 Dados do Comércio Exterior</a> |
+    <a href="contato.html">�� Fale com um Especialista</a>
+  </p>
+</div>
+
+<!-- ✅ Hero Banner com Manifesto Institucional Completo -->
+<section class="section hero">
+  <div class="container">
+    <h2>Integramos Estratégia, Operação e Resultado</h2>
+    <p>
+      🚀 **OLV INTERNACIONAL** — 35 anos integrando estratégia, operação e resultado.
+      Somos especialistas em Supply Chain, Comércio Exterior e Logística Internacional.
+      Atuamos como o braço consultivo do Ecossistema OLV, oferecendo suporte completo para empresas que querem importar, exportar, expandir seus negócios,
+      operar com segurança e alta performance no mercado global.
+    </p>
+    <p>
+      Nossa missão é simplificar operações complexas, acelerar negócios e integrar estratégias com resultados.
+      Atuamos como uma extensão do seu negócio, sem ativos próprios, focando exclusivamente na entrega de valor.
+      Nossa metodologia combina análise precisa, dados, inteligência de mercado, tecnologias e experiência prática.
+      Estamos preparados para atender empresas que nunca internacionalizaram até aquelas que já operam globalmente, mas precisam de um salto de performance.
+    </p>
+    <p>
+      Do Radar SISCOMEX ao Embarque. Da Estratégia à Execução. Da Burocracia ao Resultado.
+    </p>
+    <ul>
+      <li>✔️ Operação Legalizada</li>
+      <li>✔️ Redução Tributária</li>
+      <li>✔️ Planejamento Logístico</li>
+      <li>✔️ Acompanhamento Total</li>
+    </ul>
+    <a href="contato.html" class="cta-button">Fale com um Especialista</a>
   </div>
 </section>
 
-<section class="section" id="sobre">
-  <h2>Sobre a OLV Internacional</h2>
-  <p><strong>OLV INTERNACIONAL – O Braço Consultivo do Ecossistema OLV CORE</strong><br><br>
-  Com mais de 35 anos de trajetória, transformamos experiência global em inteligência aplicada. Somos especialistas em Supply Chain, Comércio Exterior e Inteligência Empresarial, apoiando PMEs na expansão de negócios com segurança e rentabilidade.</p>
+<!-- ✅ Bloco de Soluções Consultivas com Cards Refinados -->
+<section class="section" id="servicos">
+  <div class="container">
+    <h2>💼 Nossas Soluções Consultivas</h2>
+    <div class="cards">
+
+      <div class="card">
+        <h3>Consultoria em Exportação</h3>
+        <ul>
+          <li>✔️ Planejamento Estratégico de Exportação</li>
+          <li>✔️ Documentação e Compliance Internacional</li>
+          <li>✔️ Exportação de Produtos, Máquinas, Serviços e Commodities</li>
+          <li>✔️ Logística Internacional 3PL | 4PL para Exportação</li>
+          <li>✔️ Planejamento Tributário na Exportação</li>
+          <li>✔️ Despacho Aduaneiro Internacional</li>
+          <li>✔️ Estratégia de Redução de Custos Operacionais</li>
+          <li>✔️ Operação Assistida e Mentoria para Exportação</li>
+          <li>✔️ Gestão Completa da Cadeia de Exportação</li>
+          <li>✔️ Exportação sob Regimes Especiais</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>Consultoria em Importação</h3>
+        <ul>
+          <li>✔️ Abertura e Estruturação de Importadoras</li>
+          <li>✔️ Regularização e Habilitação no Radar SISCOMEX</li>
+          <li>✔️ Importação para Revenda, Produção ou Consumo</li>
+          <li>✔️ Compliance Aduaneiro e Tributário na Importação</li>
+          <li>✔️ Planejamento Tributário (Ex-Tarifário, Drawback, RECOF)</li>
+          <li>✔️ Logística Internacional de Importação (Door-to-Door)</li>
+          <li>✔️ Gestão de Freight Forwarder e Custos Logísticos</li>
+          <li>✔️ Operação Assistida e Treinamento Prático</li>
+          <li>✔️ Estratégias de Redução de Custos Tributários</li>
+          <li>✔️ Due Diligence Operacional na Cadeia de Importação</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>Logística Internacional | Supply Chain | 3PL & 4PL</h3>
+        <ul>
+          <li>✔️ Gestão Ponta a Ponta da Cadeia Logística</li>
+          <li>✔️ Freight Forwarding Global (Aéreo, Marítimo, Multimodal)</li>
+          <li>✔️ Gerenciamento de Armazéns e Centros de Distribuição</li>
+          <li>✔️ Planejamento Logístico Estratégico</li>
+          <li>✔️ Monitoramento de Embarques Globais</li>
+          <li>✔️ S&OP Internacional (Sales & Operations Planning)</li>
+          <li>✔️ Controle de Estoques Globais (JIT / JIS / Kanban)</li>
+          <li>✔️ Otimização de CAPEX e OPEX Logístico</li>
+          <li>✔️ Estratégias de Nearshoring e Offshoring</li>
+          <li>✔️ Redução de Custos Logísticos Internacionais</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>Compliance, Planejamento Tributário e Due Diligence</h3>
+        <ul>
+          <li>✔️ Planejamento Tributário Nacional e Internacional</li>
+          <li>✔️ Compliance Aduaneiro, Fiscal e Tributário</li>
+          <li>✔️ Gestão de Regimes Especiais (Drawback, RECOF, Linha Azul)</li>
+          <li>✔️ Regularização Societária e Operacional para Comércio Exterior</li>
+          <li>✔️ Auditorias Fiscais, Operacionais e Aduaneiras</li>
+          <li>✔️ Gestão de Riscos Jurídicos e Operacionais na Cadeia Global</li>
+          <li>✔️ Due Diligence Comercial, Fiscal e Logística</li>
+          <li>✔️ Blindagem Empresarial para Operações Internacionais</li>
+          <li>✔️ Análise Contratual para Comércio Exterior</li>
+          <li>✔️ Mitigação de Riscos na Operação Logística e Cambial</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>Treinamento, Mentoria e Capacitação Executiva</h3>
+        <ul>
+          <li>✔️ Cursos Intensivos de Importação e Exportação</li>
+          <li>✔️ Workshops em Supply Chain, Comex e Logística Internacional</li>
+          <li>✔️ Mentoria Personalizada para Empresários e Equipes</li>
+          <li>✔️ Operação Assistida (Aprenda na Prática)</li>
+          <li>✔️ Capacitação em Compliance, Documentação e Aduana</li>
+          <li>✔️ Gestão Estratégica de Custos e Logística Internacional</li>
+          <li>✔️ Desenvolvimento de Lideranças em Comex e Supply Chain</li>
+          <li>✔️ S&OP, Forecasting, Planejamento e Execução Global</li>
+          <li>✔️ Gestão de Riscos e Soluções de Crises Logísticas</li>
+          <li>✔️ Consultoria Educacional para PME’s e Multinacionais</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
 </section>
 
-<section class="section" id="solucoes">
-  <h2>Nossas Soluções</h2>
-  <p>Consultoria estratégica em supply chain, comércio exterior, gestão de riscos, planejamento logístico, compliance, due diligence, inteligência financeira, internacionalização e transformação digital.</p>
+<!-- ✅ Bloco Radar 360 -->
+<section class="section radar">
+  <div class="container">
+    <h2>🚀 Radar 360 – Dados, Inteligência e Simuladores</h2>
+    <p>Simuladores, cotações em tempo real, fretes, notícias e insights do mercado global. Uma central de inteligência para sua empresa operar com segurança e estratégia.</p>
+    <a href="radar360.html" class="cta-button">Acessar Radar 360</a>
+  </div>
 </section>
 
-<section class="section" id="blog">
-  <h2>Blog e Insights</h2>
-  <p>Fique por dentro de tendências, mercado, inovação, supply chain, comércio exterior, finanças e tecnologia.</p>
+<!-- ✅ Bloco Blog -->
+<section class="section blog">
+  <div class="container">
+    <h2>Blog & Insights</h2>
+    <p>Fique por dentro das tendências em Supply Chain, Comércio Exterior e Logística Internacional. Conteúdo de alto valor estratégico para quem quer crescer globalmente.</p>
+     <!-- Aqui entrariam os cards de blog posts -->
+  </div>
 </section>
 
-<section class="section" id="contato">
-  <h2>Contato</h2>
-  <p>Fale conosco. WhatsApp, E-mail, Formulário e Redes Sociais.</p>
+<!-- ✅ Bloco Contato -->
+<section class="section contato">
+  <div class="container">
+    <h2>Fale com um Especialista</h2>
+    <p>Entre em contato agora via WhatsApp, e-mail ou formulário. Nossa equipe está pronta para transformar sua operação.</p>
+    <a href="contato.html" class="cta-button">Fale Agora</a>
+     <!-- Aqui entraria o formulário de contato -->
+  </div>
 </section>
 
+<!-- ✅ Footer Premium com Ícones Oficiais -->
 <footer>
-  <p>
-    © Copyright - OLV INTERNACIONAL COMÉRCIO, IMPORTAÇÃO E EXPORTAÇÃO LTDA - CNPJ 67.867.580/0001-90 |
-    Desenvolvido por <a href="https://www.i9certonegocios.com.br" target="_blank">I9Certo Negócios Digitais</a> |
-    All Rights Reserved | Powered by OLV Internacional
-  </p>
-  <div class="social-icons">
-    <a href="https://www.facebook.com/olvinternacional/" target="_blank">🔗</a>
-    <a href="https://www.linkedin.com/in/olv-internacional-b1734a193/" target="_blank">🔗</a>
-    <a href="https://www.instagram.com/olvinternacional/" target="_blank">🔗</a>
-    <a href="mailto:atendimento@olvinternacional.com.br">📧</a>
+  <div class="container">
+    <p>&copy; 2025 OLV INTERNACIONAL | CNPJ 67.867.580/0001-90 | Desenvolvido com excelência pelo Ecossistema OLV CORE</p>
+    <div class="social-icons">
+      <a href="https://instagram.com/olvinternacional"  title="Instagram OLV Internacional">
+        <img src="icons/instagram.svg" alt="Instagram">
+      </a>
+      <a href="https://linkedin.com/in/olvinternacional"  title="LinkedIn OLV Internacional">
+        <img src="icons/linkedin.svg" alt="LinkedIn">
+      </a>
+      <a href="https://facebook.com/olvinternacional"  title="Facebook OLV Internacional">
+        <img src="icons/facebook.svg" alt="Facebook">
+      </a>
+      <a href="mailto:atendimento@olvinternacional.com.br" title="Enviar E-mail para OLV Internacional">
+        <img src="icons/email.svg" alt="E-mail">
+      </a>
+       <!-- Adicionar outros links úteis aqui, se necessário -->
+    </div>
   </div>
 </footer>
+
+<!-- ✅ Botões Flutuantes (WhatsApp e Fale com um Especialista) -->
+<a href="https://wa.me/5511999999999" class="whatsapp-button"  title="Fale conosco pelo WhatsApp">
+  <img src="icons/whatsapp.svg" alt="WhatsApp">
+</a>
+
+<a href="contato.html" class="specialist-button" title="Fale com um Especialista OLV">
+  Fale com um Especialista
+</a>
+
 
 </body>
 </html>
