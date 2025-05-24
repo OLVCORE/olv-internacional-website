@@ -250,6 +250,25 @@ nav a.active { /* ✅ Estilo para link ativo na navegação */
   color: var(--text-color-light);
 }
 
+/* ✅ Estilos para a Hero Section da página Soluções */
+.hero-solucoes {
+  text-align: center;
+  padding: 80px 0;
+}
+
+.hero-solucoes h2 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero-solucoes p {
+  max-width: 900px;
+  margin: 20px auto 40px auto;
+  font-size: 1.2rem;
+  line-height: 1.7;
+  color: var(--text-color-light);
+}
+
 
 /* Cards (Soluções Consultivas, Ecossistema, etc.) */
 .cards {
@@ -424,7 +443,8 @@ nav a.active { /* ✅ Estilo para link ativo na navegação */
 .floating-buttons {
   position: fixed;
   bottom: 20px;
-  left: 20px; /* ✅ Posicionado à esquerda */
+  right: 20px; /* ✅ Posicionado à direita */
+  left: auto; /* ✅ Remove o posicionamento à esquerda */
   display: flex;
   gap: 10px;
   z-index: 999; /* Garante que fiquem acima de outros elementos */
@@ -523,6 +543,129 @@ footer p {
   text-align: center;
 }
 
+/* ✅ Estilos para o Manifesto na página Sobre */
+#manifesto-olv {
+  padding-top: 40px; /* Ajuste de padding para o manifesto */
+}
+
+.manifesto-slogan {
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 50px;
+  color: var(--highlight-color);
+}
+
+.manifesto-block {
+  margin-bottom: 40px;
+}
+
+.manifesto-block h3 {
+  font-size: 1.8rem;
+  color: var(--primary-color);
+  text-align: left;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.manifesto-block h3 img {
+  width: 28px;
+  height: 28px;
+  margin-right: 10px;
+}
+
+.manifesto-block p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--text-color-light);
+  margin-bottom: 15px;
+}
+
+.manifesto-block ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.manifesto-block ul li {
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 10px;
+  font-size: 1.05rem;
+  color: var(--font-color);
+}
+
+.manifesto-block ul li:before {
+  content: '🔹'; /* Ou um ícone SVG pequeno */
+  color: var(--highlight-color);
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.manifesto-signature {
+  font-size: 1.2rem;
+  font-style: italic;
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  color: var(--primary-color);
+  line-height: 1.8;
+}
+
+.manifesto-summary {
+  margin-top: 60px;
+  padding-top: 40px;
+  border-top: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.manifesto-summary h3 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.manifesto-summary p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--text-color-light);
+  margin-bottom: 20px;
+}
+
+.manifesto-summary ul {
+  list-style: none;
+  padding-left: 0;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.manifesto-summary ul li {
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 10px;
+  font-size: 1.05rem;
+  color: var(--font-color);
+}
+
+.manifesto-summary ul li:before {
+  content: '✔️';
+  color: var(--highlight-color);
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+/* ✅ Estilos para a seção de CTA na página Sobre */
+.cta-section {
+  text-align: center;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.cta-section .cta-button {
+  margin: 15px; /* Espaçamento entre os botões */
+}
+
 
 /* Media Queries para Responsividade */
 @media (max-width: 768px) {
@@ -573,8 +716,8 @@ footer p {
   /* ✅ Ajustes para botões flutuantes em mobile */
   .floating-buttons {
     bottom: 10px;
-    left: 10px; /* Mantém à esquerda em mobile */
-    right: auto; /* Remove o right */
+    right: 10px; /* ✅ Mantém à direita em mobile */
+    left: auto; /* ✅ Remove o posicionamento à esquerda */
     gap: 8px; /* Ajusta o espaçamento */
   }
   .whatsapp-button, .specialist-button {
@@ -603,5 +746,27 @@ footer p {
     width: 24px;
     height: 24px;
     margin-right: 10px;
+  }
+
+  /* ✅ Ajustes específicos para Manifesto em mobile */
+  .manifesto-slogan {
+    font-size: 1.2rem;
+  }
+  .manifesto-block h3 {
+    font-size: 1.5rem;
+  }
+  .manifesto-block p, .manifesto-block ul li, .manifesto-summary p, .manifesto-summary ul li {
+    font-size: 0.95rem;
+  }
+  .manifesto-signature {
+    font-size: 1rem;
+  }
+
+  /* ✅ Ajustes específicos para Soluções em mobile */
+  .hero-solucoes h2 {
+    font-size: 2rem;
+  }
+  .hero-solucoes p {
+    font-size: 1rem;
   }
 }
