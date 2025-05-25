@@ -1,3 +1,23 @@
+/*
+================================================================================
+FILOSOFIA DE DESIGN: RESPONSIVIDADE, FLUIDEZ E ADAPTABILIDADE 100%
+================================================================================
+Este CSS é construído sob o princípio de um layout totalmente responsivo, fluido
+e adaptativo. Ele garante que o website ocupe 100% da largura e da altura da
+tela em qualquer dispositivo (desktop, notebook, tablet, celular - retrato e
+paisagem) e resolução (incluindo ultra-wide), sem scroll horizontal indesejado.
+A navegação é fluida, suave e com excelente experiência visual (UX)
+independente do tamanho da tela.
+
+Termos Técnicos Profissionais Aplicados:
+- Layout Responsivo (Responsive Design): Ajusta o conteúdo conforme a largura da tela.
+- Layout Fluido (Fluid Layout): Usa unidades relativas (%, vw, vh, rem, em).
+- Layout Adaptativo (Adaptive Layout): Tem breakpoints específicos para diferentes tamanhos.
+- Full Width & Full Height: Ocupa 100% da largura (width) e 100% da altura (height) do viewport.
+- Viewport Fit: Conteúdo se estende ao máximo nas bordas dos dispositivos.
+================================================================================
+*/
+
 /* Variáveis de Cores e Fontes */
 :root {
   --primary-color: #d4af37; /* Dourado OLV */
@@ -16,12 +36,18 @@
   box-sizing: border-box;
 }
 
+/* Garante que HTML e Body ocupem 100% da altura da viewport */
+html, body {
+  height: 100%;
+}
+
 body {
   background-color: var(--background-color);
   color: var(--font-color);
   font-family: 'Inter', sans-serif;
   margin: 0;
   padding-left: 60px; /* Espaço para o sidebar */
+  min-height: 100vh; /* Garante que o body ocupe no mínimo 100% da altura da viewport */
   overflow-x: hidden; /* Evita scroll horizontal indesejado */
   line-height: 1.6; /* Espaçamento padrão entre linhas */
   word-wrap: break-word; /* Quebra palavras longas */
@@ -36,7 +62,7 @@ img {
 
 /* Container Centralizado */
 .container {
-  max-width: 1400px; /* Largura máxima do conteúdo */
+  max-width: 1400px; /* Largura máxima do conteúdo para legibilidade */
   margin: 0 auto; /* Centraliza o container */
   padding: 0 2cm; /* Margem lateral de 2cm */
   box-sizing: border-box; /* Inclui padding na largura total */
@@ -614,6 +640,16 @@ footer p {
 /* ✅ Estilos para o Manifesto na página Sobre */
 #manifesto-olv {
   padding-top: 40px; /* Ajuste de padding para o manifesto */
+}
+
+/* AJUSTE PARA O ÍCONE DO MANIFESTO - ADICIONADO AQUI */
+#manifesto-olv h2 img {
+  width: 32px !important; /* Força o tamanho do ícone */
+  height: 32px !important;
+  max-width: 32px !important;
+  max-height: 32px !important;
+  margin-right: 15px;
+  vertical-align: middle;
 }
 
 .manifesto-slogan {
