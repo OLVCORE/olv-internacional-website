@@ -158,6 +158,15 @@ nav a.active { /* ✅ Estilo para link ativo na navegação */
   text-decoration: underline;
 }
 
+/* Estilo para ícones dentro do ticker */
+.ticker-icon {
+  width: 18px; /* Tamanho do ícone no ticker */
+  height: 18px;
+  margin-right: 5px;
+  vertical-align: middle; /* Alinha o ícone com o texto */
+  display: inline-block; /* Garante que o ícone não quebre a linha */
+}
+
 @keyframes ticker {
   0% { transform: translateX(0); }
   100% { transform: translateX(-100%); }
@@ -184,11 +193,25 @@ nav a.active { /* ✅ Estilo para link ativo na navegação */
   justify-content: center;
 }
 
-.section h2 img { /* ✅ Estilo para ícones nos títulos de seção */
+/* Estilo para ícones nos títulos de seção */
+.section-icon {
   width: 32px;
   height: 32px;
   margin-right: 15px;
   vertical-align: middle;
+}
+
+/* Estilo para Banners */
+.banner-section {
+  text-align: center;
+  margin: 20px 0; /* Espaçamento para o banner */
+}
+
+.banner-image {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
 }
 
 /* Hero Section (Home Page) */
@@ -207,6 +230,15 @@ nav a.active { /* ✅ Estilo para link ativo na navegação */
   margin: 20px auto;
   font-size: 1.1rem;
   line-height: 1.6;
+}
+
+/* Estilo para ícones dentro do hero */
+.hero-icon {
+  width: 24px; /* Tamanho do ícone no hero */
+  height: 24px;
+  margin-right: 8px;
+  vertical-align: middle;
+  display: inline-block;
 }
 
 .hero ul {
@@ -381,6 +413,19 @@ nav a.active { /* ✅ Estilo para link ativo na navegação */
   margin-right: 5px;
   vertical-align: middle;
   filter: brightness(1.2);
+}
+
+/* Estilos para os logos das plataformas dentro dos cards do Ecossistema */
+.platform-logo {
+  border: 3px solid var(--primary-color); /* Borda dourada */
+  border-radius: 8px; /* Cantos arredondados para a borda */
+  transition: box-shadow 0.3s ease; /* Transição suave para o sombreamento */
+  object-fit: contain; /* Garante que a imagem se ajuste dentro do espaço sem cortar */
+  margin-bottom: 15px; /* Espaçamento abaixo do logo */
+}
+
+.platform-logo:hover {
+  box-shadow: 0 0 10px rgba(212, 175, 55, 0.6); /* Sombra dourada no hover */
 }
 
 /* Botão CTA Geral */
@@ -903,7 +948,7 @@ footer p {
     font-size: 0.95rem;
   }
   .manifesto-signature {
-    font-size: 1rem;
+    font-size: 1.0rem;
   }
 
   /* ✅ Ajustes específicos para Soluções em mobile */
@@ -932,4 +977,3 @@ footer p {
     grid-template-columns: 1fr;
   }
 }
-

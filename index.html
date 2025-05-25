@@ -26,10 +26,64 @@
   <link rel="stylesheet" href="css/style.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
+  <!-- ✅ Links para SEO e Performance -->
+  <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" /> <!-- AOS - Animate On Scroll CSS -->
+
+  <!-- ✅ Schema.org Markup para SEO Avançado -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "OLV Internacional",
+    "url": "https://olvinternacional.com.br",
+    "logo": "https://olvinternacional.com.br/images/olv-internacional-logo.jpeg",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+55-11-2675-1446",
+      "contactType": "customer service"
+    },
+    "sameAs": [
+      "https://instagram.com/olvinternacional",
+      "https://linkedin.com/in/olvinternacional",
+      "https://facebook.com/olvinternacional"
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "url": "https://olvinternacional.com.br",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://olvinternacional.com.br/search?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+
   <!-- Script JS -->
   <script defer src="js/script.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> <!-- AOS - Animate On Scroll JS -->
+  <script>
+    AOS.init(); // Inicializa a biblioteca AOS
+  </script>
+
+  <!-- ✅ Google Tag Manager (GTM) - Head -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-XXXXXXX');</script>
+  <!-- End Google Tag Manager -->
+
 </head>
 <body>
+  <!-- ✅ Google Tag Manager (GTM) - NoScript -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
 
 <!-- ✅ Sidebar Premium com Ícones SVG e Hover Inteligente -->
 <div class="sidebar">
@@ -76,7 +130,7 @@
     <!-- ✅ Logo e Slogan Integrados -->
     <div class="logo-slogan">
       <a href="index.html" class="logo-link">
-        <img src="images/olv-logo.svg" alt="OLV Internacional Logo" class="olv-logo">
+        <img src="images/olv-internacional-logo.jpeg" alt="OLV Internacional Logo" class="olv-logo">
         <span class="olv-slogan">Integramos Estratégia, Operação e Resultado</span>
       </a>
     </div>
@@ -96,21 +150,26 @@
 <div class="ticker">
   <div class="container"> <!-- ✅ Container adicionado para consistência -->
     <p>
-      <a href="radar360.html" target="_blank">🚀 Radar 360 Ativo</a> |
-      <a href="https://www.bcb.gov.br/estatisticas/mercadoabertodiario" target="_blank">🌍 Câmbio em Tempo Real</a> |
-      <a href="solucoes.html">�� Consultoria Premium</a> |
-      <a href="https://comexstat.mdic.gov.br/" target="_blank">�� Dados do Comércio Exterior</a> |
-      <a href="contato.html" target="_blank">🔥 Fale com um Especialista</a>
+      <a href="radar360.html" target="_blank"><img src="icons/rocket.svg" alt="Rocket icon" class="ticker-icon"> Radar 360 Ativo</a> |
+      <a href="https://www.bcb.gov.br/estatisticas/mercadoabertodiario" target="_blank"><img src="icons/globe.svg" alt="Globe icon" class="ticker-icon"> Câmbio em Tempo Real</a> |
+      <a href="solucoes.html"><img src="icons/briefcase.svg" alt="Briefcase icon" class="ticker-icon"> Consultoria Premium</a> |
+      <a href="https://comexstat.mdic.gov.br/" target="_blank"><img src="icons/bar-chart.svg" alt="Bar chart icon" class="ticker-icon"> Dados do Comércio Exterior</a> |
+      <a href="contato.html" target="_blank"><img src="icons/fire.svg" alt="Fire icon" class="ticker-icon"> Fale com um Especialista</a>
     </p>
   </div>
 </div>
 
+<!-- ✅ Banner Principal (Adicionado) -->
+<section class="banner-section">
+  <img src="images/banner-home.jpeg" alt="Banner Principal OLV Internacional" class="banner-image">
+</section>
+
 <!-- Hero Banner -->
-<section class="section hero">
+<section class="section hero" data-aos="fade-up"> <!-- ✅ Animação AOS -->
   <div class="container">
     <h2>Integramos Estratégia, Operação e Resultado</h2>
     <p>
-      �� **OLV INTERNACIONAL** — 35 anos integrando estratégia, operação e resultado.
+      <img src="icons/rocket.svg" alt="Rocket icon" class="hero-icon"> <strong>OLV INTERNACIONAL</strong> — 35 anos integrando estratégia, operação e resultado.
       Somos especialistas em Supply Chain, Comércio Exterior e Logística Internacional.
       Atuamos como o braço consultivo do Ecossistema OLV, oferecendo suporte completo para empresas que querem importar, exportar, expandir seus negócios,
       operar com segurança e alta performance no mercado global.
@@ -135,9 +194,9 @@
 </section>
 
 <!-- Bloco de Soluções Consultivas com Cards Refinados -->
-<section class="section" id="servicos">
+<section class="section" id="servicos" data-aos="fade-up"> <!-- ✅ Animação AOS -->
   <div class="container">
-    <h2>💼 Nossas Soluções Consultivas</h2>
+    <h2><img src="icons/briefcase.svg" alt="Briefcase icon" class="section-icon"> Nossas Soluções Consultivas</h2>
     <div class="cards">
 
       <div class="card">
@@ -225,7 +284,7 @@
 </section>
 
 <!-- Bloco Contato -->
-<section class="section contato">
+<section class="section contato" data-aos="fade-up"> <!-- ✅ Animação AOS -->
   <div class="container">
     <h2>Fale com um Especialista</h2>
     <p class="contact-paragraph">Entre em contato agora via WhatsApp, e-mail ou formulário. Nossa equipe está pronta para transformar sua operação.</p>
@@ -257,7 +316,7 @@
 
 <!-- ✅ Botões Flutuantes (WhatsApp e Fale com um Especialista) -->
 <div class="floating-buttons">
-  <a href="https://wa.me/5511267514469" class="whatsapp-button" target="_blank" title="Fale conosco pelo WhatsApp">
+  <a href="https://wa.me/551126751446" class="whatsapp-button" target="_blank" title="Fale conosco pelo WhatsApp">
     <img src="icons/whatsapp.svg" alt="WhatsApp"> WhatsApp
   </a>
   <a href="contato.html" class="specialist-button" title="Fale com um Especialista OLV">
